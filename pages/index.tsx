@@ -1,8 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
-import { Text, Grid, GridItem, Image, Flex } from '@chakra-ui/react';
+import {
+  Text,
+  Grid,
+  GridItem,
+  Image,
+  Flex,
+  VStack,
+  Heading
+} from '@chakra-ui/react';
 
 import Header from '@components/header';
+import MovieBox from '@components/movie-box';
 
 import CosiTimesFont from '@styles/fonts';
 
@@ -30,25 +39,25 @@ const Home = () => {
       <Header />
 
       <Grid
-        templateColumns="40% 60%"
+        templateColumns="1fr 1fr"
         templateRows="repeat(2, auto)"
         marginBottom={16}
       >
-        <Text
+        <Heading
           fontFamily="heading"
-          fontSize={['98px', '168px']}
+          fontSize={['98px', '128px', '168px']}
           lineHeight="shorter"
         >
-          Hans
-        </Text>
+          HANS
+        </Heading>
         <GridItem colStart={2} rowStart={2}>
-          <Text
+          <Heading
             fontFamily="heading"
-            fontSize={['98px', '168px']}
+            fontSize={['98px', '128px', '168px']}
             lineHeight="shorter"
           >
-            Zimmer
-          </Text>
+            ZIMMER
+          </Heading>
         </GridItem>
         <GridItem
           colStart={1}
@@ -62,11 +71,101 @@ const Home = () => {
         </GridItem>
       </Grid>
 
-      <Flex>
+      <Flex position="relative">
         <Image
           src="/assets/hans-zimmer.png"
+          bgSize="cover"
           alt="hans zimmer sitting on chair"
+          minW="50%"
         />
+        <VStack
+          spacing="8"
+          alignItems="left"
+          position="absolute"
+          top="90%"
+          right="0"
+          w="60%"
+        >
+          <Text
+            color="grey.medium"
+            letterSpacing="wide"
+            fontSize="xl"
+            fontWeight="light"
+          >
+            Voluptate officia officia nostrud eu duis nisi ut tempor magna. Sit
+            proident veniam id minim mollit elit cupidatat culpa non labore qui
+            id. Reprehenderit excepteur enim duis sunt nostrud aliqua ut fugiat
+            nisi velit nisi fugiat ullamco sint. Anim excepteur aliqua aliqua
+            occaecat proident quis reprehenderit voluptate nisi consectetur.
+          </Text>
+
+          <Text letterSpacing="wide" fontSize="2xl" casing="uppercase">
+            Hans Zimmer Tour | Live <br /> In Pargue
+          </Text>
+        </VStack>
+      </Flex>
+
+      <Flex marginTop={96} direction="column">
+        <Heading fontSize="7xl" marginBottom={32}>
+          19-20 / <br /> RELEASES
+        </Heading>
+        <Flex direction="column">
+          {[
+            {
+              image: 'lion-king.jfif',
+              year: 2020,
+              job: 'Composer',
+              title: 'THE LION KING'
+            },
+            {
+              image: 'no-time-to-die.jpg',
+              year: 2020,
+              job: 'Score Producer / J. Marr',
+              title: 'NO TIME TO DIE'
+            },
+            {
+              image: 'x-men.jpg',
+              year: 2020,
+              job: 'Composer',
+              title: 'X-MEN:DARK PHOENIX'
+            }
+          ].map((el, i) => (
+            <MovieBox {...el} index={i} key={i} />
+          ))}
+        </Flex>
+      </Flex>
+
+      <Flex marginTop={96} direction="column">
+        <Heading fontSize="7xl" marginBottom={32}>
+          LATEST /
+        </Heading>
+        <Grid templateColumns="30% 60%" columnGap="10%">
+          <Flex direction="column">
+            <Image src="/assets/barry-levinson.jfif" marginBottom="8" />
+            <Heading
+              fontFamily="body"
+              fontSize="3xl"
+              fontWeight="normal"
+              marginBottom="6"
+            >
+              NEW FILM IS &#8599; <br /> DIRECTED BY BARRY LEVINSON
+            </Heading>
+            <Text fontWeight="light">2020, Sep 15</Text>
+          </Flex>
+          <Flex direction="column">
+            <Image src="/assets/bond-movie.png" marginBottom="8" />
+            <Heading
+              fontFamily="body"
+              fontSize="3xl"
+              fontWeight="normal"
+              marginBottom="6"
+            >
+              &apos;NO TIME TO DIE&apos; / HANS ZIMMER &#8599; <br /> TAKES OVER
+              AS COMPOSER ON <br /> BOND MOVIE
+            </Heading>
+            <Text fontWeight="light">2020, June 06</Text>
+          </Flex>
+        </Grid>
       </Flex>
     </div>
   );
