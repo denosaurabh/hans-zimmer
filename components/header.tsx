@@ -1,6 +1,8 @@
-import { VStack, Text, Circle } from '@chakra-ui/react';
+import { VStack, Text } from '@chakra-ui/react';
+
 import MotionGrid from '@components/motion/grid';
 import Logo from '@components/logo';
+import MotionCircle from '@components/motion/circle';
 
 const Header = () => {
   return (
@@ -27,11 +29,17 @@ const Header = () => {
         <Text fontWeight="200">NEWS</Text>
       </VStack>
 
-      <Circle size={120} bg="grey.light">
+      <MotionCircle
+        size={120}
+        bg="grey.light"
+        initial={{ rotate: 0 }}
+        animate={{ rotate: 360 }}
+        transition={{ ease: 'linear', duration: 10, repeat: Infinity }}
+      >
         <Text fontFamily="serif" color="grey.dark">
           Hans Zimmer European Tour 2021
         </Text>
-      </Circle>
+      </MotionCircle>
     </MotionGrid>
   );
 };
