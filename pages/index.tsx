@@ -13,6 +13,8 @@ import {
 import Header from '@components/header';
 import MovieBox from '@components/movie-box';
 
+import MainHeading from '@components/motion/heading';
+
 import CosiTimesFont from '@styles/fonts';
 
 const Home = () => {
@@ -26,6 +28,12 @@ const Home = () => {
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
           rel="stylesheet"
+        />
+
+        <link
+          href="//db.onlinewebfonts.com/c/39f1392b405636e18b86258bbb58bb45?family=Cosi+Times+Light+Condensed"
+          rel="stylesheet"
+          type="text/css"
         />
 
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -43,16 +51,21 @@ const Home = () => {
         templateRows="repeat(2, auto)"
         marginBottom={16}
       >
-        <Heading
+        <MainHeading
           fontFamily="heading"
+          fontWeight="light"
           fontSize={['98px', '128px', '168px']}
           lineHeight="shorter"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
         >
           HANS
-        </Heading>
+        </MainHeading>
         <GridItem colStart={2} rowStart={2}>
           <Heading
             fontFamily="heading"
+            fontWeight="light"
             fontSize={['98px', '128px', '168px']}
             lineHeight="shorter"
           >
@@ -80,7 +93,7 @@ const Home = () => {
         />
         <VStack
           spacing="8"
-          alignItems="left"
+          lignItems="left"
           position="absolute"
           top="90%"
           right="0"
@@ -106,7 +119,7 @@ const Home = () => {
       </Flex>
 
       <Flex marginTop={96} direction="column">
-        <Heading fontSize="7xl" marginBottom={32}>
+        <Heading fontSize="7xl" marginBottom={32} fontWeight="light">
           19-20 / <br /> RELEASES
         </Heading>
         <Flex direction="column">
@@ -136,7 +149,7 @@ const Home = () => {
       </Flex>
 
       <Flex marginTop={96} direction="column">
-        <Heading fontSize="7xl" marginBottom={32}>
+        <Heading fontSize="7xl" marginBottom={32} fontWeight="light">
           LATEST /
         </Heading>
         <Grid templateColumns="30% 60%" columnGap="10%">

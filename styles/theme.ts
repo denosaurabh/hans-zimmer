@@ -9,7 +9,7 @@ const theme = extendTheme({
     }
   },
   fonts: {
-    heading: "'Cosi Times', serif",
+    heading: 'Cosi Times Light Condensed',
     body: "'Poppins', sans-serif",
     serif: "'Playfair Display', serif"
   },
