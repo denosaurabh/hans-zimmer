@@ -9,7 +9,7 @@ const Header = () => {
     <MotionGrid
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.7, delay: 1.4 }}
+      transition={{ duration: 0.7, delay: 2 }}
       gridTemplateColumns="50% 1fr 1fr 1fr"
       alignItems="start"
     >

@@ -1,4 +1,10 @@
-import React, { useRef, useState, useCallback, useLayoutEffect } from 'react';
+import React, {
+  useRef,
+  useState,
+  useCallback,
+  useLayoutEffect,
+  useEffect
+} from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 import {
   useViewportScroll,
@@ -6,6 +12,8 @@ import {
   useSpring,
   motion
 } from 'framer-motion';
+
+import MotionBox from '@components/motion/box';
 
 interface SmoothScrollProps {
   children: JSX.Element[];
@@ -21,15 +29,16 @@ const SmoothScroll = ({ children }: SmoothScrollProps) => {
   // update scrollable height when browser is resizing
   const resizePageHeight = useCallback(entries => {
     for (const entry of entries) {
-      setPageHeight(entry.contentRect.height);
+      setPageHeight(3000); // PREV: entry.contentRect.height
     }
   }, []);
 
   // observe when browser is resizing
   useLayoutEffect(() => {
-    const resizeObserver = new ResizeObserver(entries =>
-      resizePageHeight(entries)
-    );
+    const resizeObserver = new ResizeObserver(entries => {
+      resizePageHeight(entries);
+    });
+
     scrollRef && resizeObserver.observe(scrollRef.current);
     return () => resizeObserver.disconnect();
   }, [scrollRef, resizePageHeight]);
@@ -42,7 +51,7 @@ const SmoothScroll = ({ children }: SmoothScrollProps) => {
   const spring = useSpring(transform, physics); // apply easing to the negative scroll value
 
   return (
-    <>
+    <MotionBox height={pageHeight}>
       <motion.div
         ref={scrollRef}
         style={{ y: spring }} // translateY of scroll container using negative scroll value
@@ -50,12 +59,16 @@ const SmoothScroll = ({ children }: SmoothScrollProps) => {
       >
         {children}
       </motion.div>
-      {/* blank div that has a dynamic height based on the content's inherent height */}
-      {/* this is neccessary to allow the scroll container to scroll... */}
-      {/* ... using the browser's native scroll bar */}
-      <div style={{ height: pageHeight }} />
-    </>
+      {/* <div style={{ height: pageHeight }}></div> */}
+    </MotionBox>
   );
 };
 
 export default SmoothScroll;
+
+/* <> */
+/* blank div that has a dynamic height based on the content's inherent height */
+/* this is neccessary to allow the scroll container to scroll... */
+/* ... using the browser's native scroll bar */
+/* <div style={{ height: pageHeight }} /> */
+/* </> */
