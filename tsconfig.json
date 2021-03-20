@@ -17,9 +17,12 @@
     "target": "esnext",
     "baseUrl": ".",
     "paths": {
-      "@styles/*": ["styles/*"],
+      "@theme/*": ["theme/*"],
       "@components/*": ["components/*"],
-      "@layouts/*": ["layouts/*"]
+      "@layouts/*": ["layouts/*"],
+      "@shared/*": ["shared/*"],
+      "@components": ["components"],
+      "@components/motion": ["components/motion"]
     },
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,

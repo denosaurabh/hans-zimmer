@@ -1,6 +1,13 @@
 import { extendTheme } from '@chakra-ui/react';
 
+import Heading from '@theme/heading';
+import Text from '@theme/text';
+
 const theme = extendTheme({
+  components: {
+    Heading,
+    Text
+  },
   colors: {
     grey: {
       light: '#E4E4E4',

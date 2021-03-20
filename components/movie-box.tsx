@@ -1,4 +1,5 @@
-import { Flex, Text, Image, Heading } from '@chakra-ui/react';
+import { Flex, Text, Image } from '@chakra-ui/react';
+import { MotionHeading } from '@components/index';
 
 interface MovieBoxProps {
   year: number;
@@ -32,8 +33,10 @@ const MovieBox = ({ year, image, title, job, index }: MovieBoxProps) => {
         marginRight="20%"
       />
       <Flex direction="column">
-        <Heading fontWeight="light">{title}</Heading>
-        <Text>{job}</Text>
+        <MotionHeading size="sm">{title}</MotionHeading>
+        <Text size="sm" variant="semibold">
+          {job}
+        </Text>
       </Flex>
     </Flex>
   );

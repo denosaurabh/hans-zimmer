@@ -16,17 +16,17 @@ const Header = () => {
       <Logo />
 
       <VStack alignItems="left" spacing={2}>
-        <Text fontWeight="200">DISCOGRAPHY</Text>
-        <Text fontWeight="200">TEAM</Text>
-        <Text fontWeight="200"></Text>
-        <Text fontWeight="200"></Text>
-        <Text fontWeight="200"></Text>
+        <Text size="sm">DISCOGRAPHY</Text>
+        <Text size="sm">TEAM</Text>
+        <Text size="sm"></Text>
+        <Text size="sm"></Text>
+        <Text size="sm"></Text>
       </VStack>
       <VStack alignItems="left" spacing={2}>
-        <Text fontWeight="200">BIOGRAPHY</Text>
-        <Text fontWeight="200">MEDIA</Text>
-        <Text fontWeight="200">ARCHIVES</Text>
-        <Text fontWeight="200">NEWS</Text>
+        <Text size="sm">BIOGRAPHY</Text>
+        <Text size="sm">MEDIA</Text>
+        <Text size="sm">ARCHIVES</Text>
+        <Text size="sm">NEWS</Text>
       </VStack>
 
       <MotionCircle
