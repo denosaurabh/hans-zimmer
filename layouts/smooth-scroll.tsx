@@ -26,6 +26,12 @@ const SmoothScroll = ({ children }: SmoothScrollProps) => {
   // page scrollable height based on content length
   const [pageHeight, setPageHeight] = useState(0);
 
+  // useEffect(() => {
+  //   if (!scrollRef) return;
+
+  //   setPageHeight(scrollRef.current.offsetHeight);
+  // }, [scrollRef]);
+
   // update scrollable height when browser is resizing
   const resizePageHeight = useCallback(entries => {
     for (const entry of entries) {
@@ -35,6 +41,8 @@ const SmoothScroll = ({ children }: SmoothScrollProps) => {
 
   // observe when browser is resizing
   useLayoutEffect(() => {
+    setPageHeight(window.innerHeight);
+
     const resizeObserver = new ResizeObserver(entries => {
       resizePageHeight(entries);
     });

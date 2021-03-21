@@ -4,6 +4,7 @@ import { MotionImage } from '@components/index';
 
 const ImgHeading = () => {
   const { scrollY } = useViewportScroll();
+
   const y1 = useTransform(scrollY, [0, 400], [0, 250]);
 
   return (

@@ -11,6 +11,7 @@ const MotionTextJSX: React.FC<TextProps> = motion(Text);
 interface MotionTextI {
   size?: string;
   children: string;
+  [key]: any;
 }
 const textContainer = {
   hidden: {},
@@ -34,7 +35,7 @@ const textItem = {
   }
 };
 
-const MotionText = ({ size, children }: MotionTextI) => {
+const MotionText = ({ size, children, ...rest }: MotionTextI) => {
   const styles = useStyleConfig('Text', { size });
 
   return (
@@ -46,7 +47,7 @@ const MotionText = ({ size, children }: MotionTextI) => {
         animate="show"
       >
         {children.split('').map((el: string, i: number) => (
-          <MotionTextJSX sx={styles} variants={textItem} key={i}>
+          <MotionTextJSX sx={styles} variants={textItem} key={i} {...rest}>
             {el == ' ' ? '\xa0' : el}
           </MotionTextJSX>
         ))}
