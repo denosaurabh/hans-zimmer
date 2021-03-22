@@ -50,7 +50,7 @@ const MotionHeading = ({ size, children, ...rest }: MotionHeadingI) => {
   };
 
   return (
-    <MotionBox overflow="hidden">
+    <MotionBox height="min-content" overflow="hidden">
       <MotionHeadingJSX
         ref={ref}
         sx={styles}
