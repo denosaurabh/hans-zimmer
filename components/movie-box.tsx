@@ -21,19 +21,28 @@ const MovieBox = ({ year, image, title, job, index }: MovieBoxProps) => {
       borderTopWidth={index === 0 ? 'thin' : ''}
       borderTopColor={index === 0 ? 'grey.light' : ''}
     >
-      <Text fontFamily="heading" fontSize="2xl" marginRight="10%">
+      <Text
+        fontFamily="heading"
+        fontSize="2xl"
+        marginRight={{ base: '4%', md: '10%' }}
+      >
         {year}
       </Text>
       <Image
-        h="140px"
-        w="190px"
+        h={{ base: '100px', md: '140px' }}
+        w={{ base: '130px', md: '190px' }}
         objectFit="cover"
         justifySelf="flex-start"
         src={`/assets/${image}`}
-        marginRight="20%"
+        marginRight={{ base: '10%', lg: '15%' }}
       />
       <Flex direction="column">
-        <MotionHeading size="sm">{title}</MotionHeading>
+        <MotionHeading
+          wordBreak="break-all"
+          fontSize={{ base: 'xl', sm: '2xl', lg: '4xl' }}
+        >
+          {title}
+        </MotionHeading>
         <Text size="sm" variant="semibold">
           {job}
         </Text>

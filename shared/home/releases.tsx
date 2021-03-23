@@ -3,8 +3,18 @@ import { MovieBox, MotionHeading } from '@components/index';
 
 const Releases = () => (
   <Flex marginTop={96} direction="column">
-    <MotionHeading marginBottom={0}>19-20 /</MotionHeading>
-    <MotionHeading marginBottom={6}>RELEASES</MotionHeading>
+    <MotionHeading
+      marginBottom={0}
+      fontSize={{ base: '4xl', sm: '5xl', lg: '6xl' }}
+    >
+      19-20 /
+    </MotionHeading>
+    <MotionHeading
+      marginBottom={6}
+      fontSize={{ base: '4xl', sm: '5xl', lg: '6xl' }}
+    >
+      RELEASES
+    </MotionHeading>
 
     <Flex direction="column" marginTop="24">
       {[

@@ -1,27 +1,27 @@
 import React from 'react';
 
-import SmoothScroll from '@layouts/smooth-scroll';
-import { Header } from '@components/index';
+import { Page } from '@layouts/index';
+import { Heading } from '@components/index';
 
-import {
-  TopHeading,
-  ImgDescription,
-  Releases,
-  Latests
-} from '@shared/home/index';
+import { ImgDescription, Releases, Latests } from '@shared/home/index';
 
 const Home = () => {
   return (
-    <>
-      <Header />
-
-      <SmoothScroll>
-        <TopHeading />
-        <ImgDescription />
-        <Releases />
-        <Latests />
-      </SmoothScroll>
-    </>
+    <Page>
+      <Heading
+        mainTitle={{ text: 'HANS' }}
+        subTitle={{ text: 'ZIMMER' }}
+        description={{
+          top: 'A GERMAN BORN FILM',
+          mid: 'SCORE COMPOSER AND',
+          bottom: 'RECORD PRODUCER',
+          paddingTop: '4'
+        }}
+      />
+      <ImgDescription />
+      <Releases />
+      <Latests />
+    </Page>
   );
 };
 

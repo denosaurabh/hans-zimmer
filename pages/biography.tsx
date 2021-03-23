@@ -1,26 +1,25 @@
 import React from 'react';
 
-import SmoothScroll from '@layouts/smooth-scroll';
-import { Header } from '@components/index';
-import {
-  ImgDescription,
-  TopHeading,
-  FilmsCareer,
-  Latests
-} from '@shared/biography';
+import { Page } from '@layouts/index';
+import { Heading } from '@components';
+import { ImgDescription, FilmsCareer, Latests } from '@shared/biography';
 
 const Home = (): JSX.Element => {
   return (
-    <>
-      <Header />
-
-      <SmoothScroll>
-        <TopHeading />
-        <ImgDescription />
-        <FilmsCareer />
-        <Latests />
-      </SmoothScroll>
-    </>
+    <Page>
+      <Heading
+        mainTitle="BIOGRAPHY"
+        subTitle="ARTIST"
+        description={{
+          top: 'MORE THAN 200',
+          mid: 'PROJECTS ACROSS ALL',
+          bottom: 'MEDIUMS'
+        }}
+      />
+      <ImgDescription />
+      <FilmsCareer />
+      <Latests />
+    </Page>
   );
 };
 

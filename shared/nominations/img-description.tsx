@@ -1,5 +1,5 @@
-import { Flex, VStack, Text } from '@chakra-ui/react';
-import { MotionImage } from '@components';
+import { Flex } from '@chakra-ui/react';
+import { MotionImage, Description } from '@components';
 import { useEffect, useRef, useState } from 'react';
 
 const ImgDescription = () => {
@@ -58,44 +58,31 @@ const ImgDescription = () => {
   // }, [mouseXY]);
 
   return (
-    <Flex position="relative" marginBottom={52}>
+    <Flex position="relative" marginBottom={{ base: 96, md: 52 }}>
       <MotionImage
         ref={imageRef}
         rounded="full"
-        h="lg"
-        w="lg"
+        h={{ base: 'sm', md: 'lg' }}
+        w={{ base: 'sm', md: 'lg' }}
         objectFit="cover"
         src="/assets/hans-zimmer-blue.jpeg"
         transition={{ ease: 'linear', duration: 0.4 }}
         // style={{ x: imgXY.x, y: imgXY.y }}
       />
 
-      <VStack
-        spacing="8"
-        alignItems="left"
+      <Description
+        subtitle={{ top: 'GO TO DISCOGRAPHY', bottom: 'ARCHIVE' }}
         position="absolute"
-        top="30%"
+        top={{ base: '80%', md: '30%' }}
         right="0"
-        w="40%"
+        w={{ base: '90%', md: '50%', lg: '40%' }}
       >
-        <Text
-          color="grey.medium"
-          letterSpacing="wide"
-          fontSize="xl"
-          fontWeight="light"
-        >
-          Zimmer has received a range of honors and awards, including the
-          Lifetim Archivement Award in film Composition from the National Board
-          of Revi the Frederick Loewe Award in 2003 at the Palm Springs
-          International Festival, ASCAP&apos; s Henry Mancini Award for Lifetime
-          Archivement, and BMI&apos; s Richard Kirk Award for lifetime
-          archivement in 1996.
-        </Text>
-
-        <Text letterSpacing="wide" fontWeight="normal" casing="uppercase">
-          GO TO DISCOGRAPHY &#8599; <br /> ARCHIVE
-        </Text>
-      </VStack>
+        Zimmer has received a range of honors and awards, including the Lifetim
+        Archivement Award in film Composition from the National Board of Revi
+        the Frederick Loewe Award in 2003 at the Palm Springs International
+        Festival, ASCAP&apos; s Henry Mancini Award for Lifetime Archivement,
+        and BMI&apos; s Richard Kirk Award for lifetime archivement in 1996.
+      </Description>
     </Flex>
   );
 };

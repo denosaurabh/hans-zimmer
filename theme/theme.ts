@@ -23,11 +23,17 @@ const theme = extendTheme({
   styles: {
     global: {
       'html, body': {
+        height: 'min-content',
         backgroundColor: 'black',
         color: 'white'
       },
-      body: {
+      '.header, .scroll-container': {
         padding: '50px 8%'
+      },
+      body: {
+        overscrollBehaviorY: 'none',
+        textRendering: 'optimizeLegibility',
+        WebkitFontSmoothing: 'antialiased'
       }
     }
   }

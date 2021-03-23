@@ -22,7 +22,7 @@ const FilmBox = () => {
       >
         <Flex justifyContent="center" alignItems="center" w="100%" h="100%">
           <MotionBox
-            initial={{ width: '100%', height: '0' }}
+            initial={{ width: 'auto', height: '0' }}
             animate={isHovered ? { height: '100%' } : {}}
             transition={{ ease: 'linear', duration: 0.4 }}
             sx={{
@@ -58,18 +58,24 @@ const FilmBox = () => {
           transition={{ ease: 'easeOut', duration: 0.4 }}
         >
           <Flex alignItems="center">
-            <Heading fontSize="8xl" marginRight="10%">
+            <Heading
+              fontSize={{ base: '4xl', lg: '6xl', xl: '8xl' }}
+              marginRight="10%"
+            >
               2020&nbsp;/
             </Heading>
-            <Text fontSize="x-large" fontWeight="normal">
+            <Text
+              fontSize={{ base: 'md', lg: 'xl', xl: 'x-large' }}
+              fontWeight="normal"
+            >
               GRAMMY <br /> AWARDS
             </Text>
           </Flex>
           <Flex direction="column" alignItems="flex-end">
-            <Heading size="sm">THE LION KING</Heading>
-            <Text size="sm" variant="semibold">
-              Nominee
-            </Text>
+            <Heading fontSize={{ base: '2xl', lg: '4xl', xl: '5xl' }}>
+              THE LION KING
+            </Heading>
+            <Text variant="semibold">Nominee</Text>
           </Flex>
         </MotionFlex>
       </GridItem>

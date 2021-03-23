@@ -1,27 +1,30 @@
 import { Flex, HStack, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 
 const Logo = () => (
-  <HStack spacing={-4} w="min">
-    <Text
-      fontSize="4xl"
-      fontWeight="normal"
-      fontFamily="serif"
-      lineHeight="shorter"
-    >
-      H
-    </Text>
-    <Flex direction="column">
+  <Link href="/">
+    <HStack spacing={-4} w="min" _hover={{ cursor: 'pointer' }}>
       <Text
         fontSize="4xl"
         fontWeight="normal"
         fontFamily="serif"
         lineHeight="shorter"
-        marginTop={3.5}
       >
-        Z
+        H
       </Text>
-    </Flex>
-  </HStack>
+      <Flex direction="column">
+        <Text
+          fontSize="4xl"
+          fontWeight="normal"
+          fontFamily="serif"
+          lineHeight="shorter"
+          marginTop={3.5}
+        >
+          Z
+        </Text>
+      </Flex>
+    </HStack>
+  </Link>
 );
 
 export default Logo;

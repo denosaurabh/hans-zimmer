@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { chakra, HTMLChakraProps, useStyleConfig } from '@chakra-ui/react';
+import { Heading, HTMLChakraProps, useStyleConfig } from '@chakra-ui/react';
 import { motion, HTMLMotionProps } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -8,16 +8,16 @@ import MotionBox from '@components/motion/box';
 type Merge<P, T> = Omit<P, keyof T> & T;
 type MotionHeadingProps = Merge<HTMLChakraProps<'h1'>, HTMLMotionProps<'h1'>>;
 
-const MotionHeadingJSX: React.FC<MotionHeadingProps> = motion(chakra.h1);
+const MotionHeadingJSX: React.FC<MotionHeadingProps> = motion(Heading);
 
 interface MotionHeadingI {
   size?: string;
   children: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 const MotionHeading = ({ size, children, ...rest }: MotionHeadingI) => {
-  const styles = useStyleConfig('Heading', { size });
+  // const styles = useStyleConfig('Heading', { size });
 
   const [alreadyShown, setAlreadyShown] = useState(false);
   const { inView, ref } = useInView();
@@ -53,7 +53,7 @@ const MotionHeading = ({ size, children, ...rest }: MotionHeadingI) => {
     <MotionBox height="min-content" overflow="hidden">
       <MotionHeadingJSX
         ref={ref}
-        sx={styles}
+        // sx={styles}
         variants={container}
         initial={'hidden'}
         animate={inView ? 'show' : ''}
