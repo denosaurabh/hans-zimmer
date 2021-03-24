@@ -1,4 +1,4 @@
-import { Box, Text, HTMLChakraProps, useStyleConfig } from '@chakra-ui/react';
+import { Box, Text, HTMLChakraProps } from '@chakra-ui/react';
 import { motion, HTMLMotionProps } from 'framer-motion';
 
 import MotionBox from '@components/motion/box';
@@ -9,9 +9,8 @@ type TextProps = Merge<HTMLChakraProps<'p'>, HTMLMotionProps<'p'>>;
 const MotionTextJSX: React.FC<TextProps> = motion(Text);
 
 interface MotionTextI {
-  size?: string;
   children: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 const textContainer = {
   hidden: {},
@@ -35,9 +34,7 @@ const textItem = {
   }
 };
 
-const MotionText = ({ size, children, ...rest }: MotionTextI) => {
-  // const styles = useStyleConfig('Text', { size });
-
+const MotionText = ({ children, ...rest }: MotionTextI) => {
   return (
     <Box overflow="hidden">
       <MotionBox

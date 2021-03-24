@@ -1,8 +1,9 @@
 import { Flex } from '@chakra-ui/react';
 import { MotionImage, Description } from '@components';
-import { useEffect, useRef, useState } from 'react';
+// import { useEffect, useRef, useState } from 'react';
 
 const ImgDescription = () => {
+  /*
   const [mouseXY, setMouseXY] = useState({ x: 0, y: 0 });
   const [imgCenterXY, setImgCenterXY] = useState({ x: 300, y: 300 });
 
@@ -22,10 +23,10 @@ const ImgDescription = () => {
 
     const centerX = x + width / 2;
     const centerY = y + height / 2 - 220;
-    /* 
-    -220 because of the Y-axis layout shift caused due to animaation, no layout change in X though,
-    I gets correted in Hot Reload also.
-    */
+    
+    // -220 because of the Y-axis layout shift caused due to animaation, no layout change in X though,
+    // I gets correted in Hot Reload also.
+    
 
     setImgCenterXY({ x: centerX, y: centerY });
   }, [imageRef]);
@@ -42,13 +43,13 @@ const ImgDescription = () => {
 
     const shiftAmount = 10;
 
-    /* Using sqrt[sq((x2-x1)) + sq(y2-y1)] for calculating distance b/w two points on a XY plane */
+    // Using sqrt[sq((x2-x1)) + sq(y2-y1)] for calculating distance b/w two points on a XY plane
     const distance = Math.sqrt(
       Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2)
     );
 
-    const imgX = (centerX / x) * shiftAmount; /* 20 for px shift */
-    const imgY = (centerY / y) * shiftAmount; /* 20 for px shift */
+    const imgX = (centerX / x) * shiftAmount;  // 20 for px shift 
+    const imgY = (centerY / y) * shiftAmount; // 20 for px shift 
 
     setImgXY({ x: imgX, y: imgY });
   }, [imgCenterXY, mouseXY]);
@@ -57,10 +58,12 @@ const ImgDescription = () => {
   //   console.log(mouseXY);
   // }, [mouseXY]);
 
+  */
+
   return (
     <Flex position="relative" marginBottom={{ base: 96, md: 52 }}>
       <MotionImage
-        ref={imageRef}
+        // ref={imageRef}
         rounded="full"
         h={{ base: 'sm', md: 'lg' }}
         w={{ base: 'sm', md: 'lg' }}

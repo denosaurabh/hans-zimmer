@@ -6,7 +6,7 @@ interface DescriptionI {
     top: string;
     bottom: string;
   };
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 const Description = ({ children, subtitle, ...rest }: DescriptionI) => {

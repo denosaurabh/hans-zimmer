@@ -5,7 +5,7 @@ const Latests = () => {
   return (
     <Box marginTop={44} marginBottom={48}>
       <Flex
-        direction={{ base: 'column', md: 'row' }}
+        flexDirection={{ base: 'column', md: 'row' }}
         justifyContent="space-between"
         w="full"
         marginBottom={40}
@@ -27,9 +27,9 @@ const Latests = () => {
       </Flex>
       <Flex
         justifyContent="space-between"
-        direction={{ base: 'column', md: 'row' }}
+        flexDirection={{ base: 'column', md: 'row' }}
       >
-        <MotionFlex width={{ base: '80%', md: '30%' }} direction="column">
+        <MotionFlex width={{ base: '80%', md: '30%' }} flexDirection="column">
           <MotionImage
             src="/assets/hans-zimmer-live-show.jpeg"
             height="md"
@@ -50,7 +50,7 @@ const Latests = () => {
         </MotionFlex>
         <MotionFlex
           width={{ base: '70%', md: '40%' }}
-          direction="column"
+          flexDirection="column"
           marginTop="32"
         >
           <MotionImage

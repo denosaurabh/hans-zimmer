@@ -12,7 +12,7 @@ const Logo = () => (
       >
         H
       </Text>
-      <Flex direction="column">
+      <Flex flexDirection="column">
         <Text
           fontSize="4xl"
           fontWeight="normal"

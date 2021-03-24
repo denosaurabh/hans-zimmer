@@ -1,18 +1,19 @@
-import { useEffect, useRef, useState } from 'react';
+// import { useEffect, useRef, useState } from 'react';
 import { Heading, Text, Flex } from '@chakra-ui/react';
-import { useViewportScroll, useTransform, useSpring } from 'framer-motion';
+// import { useViewportScroll } from 'framer-motion';
 import { MotionFlex, MotionImage } from '@components/index';
 
 const Latests = () => {
-  const { scrollY } = useViewportScroll();
-  const ref = useRef(null);
+  // const { scrollY } = useViewportScroll();
+  /*
+  const ref = useRef<HTMLDivElement>(null);
   const [elementTop, setElementTop] = useState(0);
   const [elementBottom, setElementBottom] = useState(0);
-  const [clientHeight, setClientHeight] = useState(0);
+  const [, setClientHeight] = useState(0);
 
   const yOffset = 100;
 
-  const [isInViewport, setIsInViewport] = useState(false);
+  const [, setIsInViewport] = useState(false);
 
   useEffect(() => {
     if (
@@ -64,11 +65,13 @@ const Latests = () => {
     }
   );
 
+  */
+
   return (
     <MotionFlex
       marginTop={{ base: 40, md: 96 }}
       marginBottom={{ base: 44, md: 80 }}
-      direction="column"
+      flexDirection="column"
       h="auto"
     >
       <Heading fontSize="7xl" marginBottom={16} fontWeight="light">
@@ -76,12 +79,12 @@ const Latests = () => {
       </Heading>
       <Flex
         justifyContent="space-between"
-        direction={{ base: 'column', md: 'row' }}
+        flexDirection={{ base: 'column', md: 'row' }}
       >
         <MotionFlex
-          ref={ref}
+          // ref={ref}
           width={{ base: '60%', md: '30%' }}
-          direction="column"
+          flexDirection="column"
           style={{ /* y: y2, */ x: 0 }}
           transition={{ duration: 2 }}
         >
@@ -100,8 +103,8 @@ const Latests = () => {
         </MotionFlex>
         <MotionFlex
           width={{ base: '80%', md: '60%' }}
-          direction="column"
-          style={{ y: y3 }}
+          flexDirection="column"
+          // style={{ y: y3 }}
           transition={{ duration: 2 }}
         >
           <MotionImage src="/assets/bond-movie.png" marginBottom={8} />

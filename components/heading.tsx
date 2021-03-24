@@ -3,7 +3,11 @@ import { MotionHeading, MotionText } from '@components/index';
 
 interface TopHeadingI {
   mainTitle: { text: string; [key: string]: unknown };
-  subTitle: { text: string; [key: string]: unknown };
+  subTitle: {
+    text: string;
+    justifySelfMobile?: string;
+    [key: string]: unknown;
+  };
   description: {
     top: string;
     mid: string;
@@ -14,7 +18,11 @@ interface TopHeadingI {
 
 const TopHeading = ({ mainTitle, subTitle, description }: TopHeadingI) => {
   const { text: mainTitleText, ...mainTitleProps } = mainTitle;
-  const { text: subTitleText, justifySelfMobile, ...subTitleProps } = subTitle;
+  const {
+    text: subTitleText,
+    justifySelfMobile = 'flex-end',
+    ...subTitleProps
+  } = subTitle;
 
   const { top, mid, bottom, ...restDesProps } = description;
 
@@ -37,7 +45,7 @@ const TopHeading = ({ mainTitle, subTitle, description }: TopHeadingI) => {
       <GridItem
         colStart={{ base: 1, md: 2 }}
         justifySelf={{
-          base: justifySelfMobile ?? 'flex-end',
+          base: justifySelfMobile,
           md: 'flex-start'
         }}
         rowStart={2}

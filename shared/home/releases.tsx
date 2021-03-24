@@ -2,7 +2,7 @@ import { Flex } from '@chakra-ui/react';
 import { MovieBox, MotionHeading } from '@components/index';
 
 const Releases = () => (
-  <Flex marginTop={96} direction="column">
+  <Flex marginTop={96} flexDirection="column">
     <MotionHeading
       marginBottom={0}
       fontSize={{ base: '4xl', sm: '5xl', lg: '6xl' }}
@@ -16,7 +16,7 @@ const Releases = () => (
       RELEASES
     </MotionHeading>
 
-    <Flex direction="column" marginTop="24">
+    <Flex flexDirection="column" marginTop="24">
       {[
         {
           image: 'lion-king.jfif',

@@ -4,7 +4,7 @@ import { MotionImage, Description } from '@components';
 const ImgDescription = () => {
   return (
     <Flex
-      direction="column"
+      flexDirection="column"
       alignItems="flex-end"
       marginBottom={{ base: 48, md: 0 }}
     >

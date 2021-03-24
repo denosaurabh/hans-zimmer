@@ -71,7 +71,7 @@ const FilmBox = () => {
               GRAMMY <br /> AWARDS
             </Text>
           </Flex>
-          <Flex direction="column" alignItems="flex-end">
+          <Flex flexDirection="column" alignItems="flex-end">
             <Heading fontSize={{ base: '2xl', lg: '4xl', xl: '5xl' }}>
               THE LION KING
             </Heading>

@@ -3,23 +3,23 @@ import { MotionFlex, MotionImage } from '@components/index';
 
 const FilmsCareer = () => {
   return (
-    <MotionFlex direction="column">
+    <MotionFlex flexDirection="column">
       <Heading fontSize="7xl" marginBottom={16} fontWeight="light">
         FILMS / <br />
         CAREER
       </Heading>
       <Flex
         justifyContent="space-between"
-        direction={{ base: 'column', md: 'row' }}
+        flexDirection={{ base: 'column', md: 'row' }}
       >
-        <MotionFlex width={{ base: '90%', md: '40%' }} direction="column">
+        <MotionFlex width={{ base: '90%', md: '40%' }} flexDirection="column">
           <MotionImage src="/assets/hans-zimmer-award.jpeg" marginBottom="8" />
         </MotionFlex>
         <MotionFlex
           width={{ base: '60%', md: '40%' }}
           marginTop={{ base: 12, md: 0 }}
           alignSelf={{ base: 'flex-end', md: 'unset' }}
-          direction="column"
+          flexDirection="column"
         >
           <MotionImage
             src="/assets/hans-zimmer-glasses.jpeg"

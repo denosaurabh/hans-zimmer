@@ -1,14 +1,14 @@
 import { VStack, Box, Text } from '@chakra-ui/react';
 
-import { Logo, MotionGrid, MotionCircle, MotionFlex } from '@components';
+import { Logo, MotionGrid, MotionCircle } from '@components';
 
 const Header = () => {
-  const array = 'Hans Zimmer European Tour 2021'.split('');
+  // const array = 'Hans Zimmer European Tour 2021'.split('');
 
-  const deg = 360 / array.length;
-  const origin = 0;
+  // const deg = 360 / array.length;
+  // const origin = 0;
 
-  const radius = 50;
+  // const radius = 50;
 
   return (
     <MotionGrid

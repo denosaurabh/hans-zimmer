@@ -36,7 +36,7 @@ const MovieBox = ({ year, image, title, job, index }: MovieBoxProps) => {
         src={`/assets/${image}`}
         marginRight={{ base: '10%', lg: '15%' }}
       />
-      <Flex direction="column">
+      <Flex flexDirection="column">
         <MotionHeading
           wordBreak="break-all"
           fontSize={{ base: 'xl', sm: '2xl', lg: '4xl' }}
