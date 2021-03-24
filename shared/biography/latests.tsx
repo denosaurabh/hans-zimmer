@@ -1,5 +1,5 @@
-import { Heading, Text, Box, Flex } from '@chakra-ui/react';
-import { MotionFlex, MotionImage, MotionHeading } from '@components/index';
+import { Text, Box, Flex } from '@chakra-ui/react';
+import { MotionHeading, NewsBox } from '@components/index';
 
 const Latests = () => {
   return (
@@ -29,47 +29,30 @@ const Latests = () => {
         justifyContent="space-between"
         flexDirection={{ base: 'column', md: 'row' }}
       >
-        <MotionFlex width={{ base: '80%', md: '30%' }} flexDirection="column">
-          <MotionImage
-            src="/assets/hans-zimmer-live-show.jpg"
-            height="md"
-            objectFit="cover"
-            marginBottom="8"
-          />
-          <Heading
-            fontFamily="body"
-            fontSize="3xl"
-            fontWeight="normal"
-            marginBottom="6"
-          >
-            HANS ZIMMER &#8599; <br /> LIVE 2021 SHOW
-          </Heading>
-          <Text size="sm" fontWeight="light">
-            2020, Sep 15
-          </Text>
-        </MotionFlex>
-        <MotionFlex
-          width={{ base: '70%', md: '40%' }}
-          flexDirection="column"
-          marginTop="32"
-        >
-          <MotionImage
-            src="/assets/hans-zimmer-ron-howard.jpg"
-            marginBottom={8}
-          />
-          <Heading
-            fontFamily="body"
-            fontSize="3xl"
-            fontWeight="normal"
-            marginBottom="6"
-          >
-            SCORING RON &#8599; <br /> HOWARDS&apos;s NEXT FILM,
-            <br /> HILLBILLY ELEGY
-          </Heading>
-          <Text size="sm" fontWeight="light">
-            2020, May 09
-          </Text>
-        </MotionFlex>
+        {[
+          {
+            width: { base: '80%', md: '30%' },
+            image: '/assets/hans-zimmer-live-show.jpg',
+            label: 'Hans Zimmer in Show',
+            imageSize: 'md',
+            heading: { top: 'HANS ZIMMER', mid: 'LIVE SHOW 2021' },
+            date: '2020, Sep 15'
+          },
+          {
+            width: { base: '70%', md: '40%' },
+            marginTop: 32,
+            image: '/assets/hans-zimmer-ron-howard.jpg',
+            label: 'Hans Zimmer meeting Ron Howard',
+            heading: {
+              top: 'SCORING RON',
+              mid: "HOWARDS' NEXT FILM,",
+              bottom: 'HILLBILLY ELEGY'
+            },
+            date: '2020, May 09'
+          }
+        ].map((news, i) => (
+          <NewsBox {...news} key={i} />
+        ))}
       </Flex>
     </Box>
   );

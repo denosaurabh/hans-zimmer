@@ -5,6 +5,7 @@ import Heading from '@components/heading';
 import Description from '@components/description';
 import Information from '@components/information';
 import Footer from '@components/footer';
+import NewsBox from '@components/news-box';
 
 import {
   MotionBox,
@@ -23,6 +24,7 @@ export {
   Heading,
   Description,
   Information,
+  NewsBox,
   Footer,
   // Motion Comps
   MovieBox,
