@@ -8,11 +8,19 @@ const FilmsCareer = () => {
         FILMS / <br />
         CAREER
       </Heading>
-      <Flex justifyContent="space-between">
-        <MotionFlex width="40%" direction="column">
+      <Flex
+        justifyContent="space-between"
+        direction={{ base: 'column', md: 'row' }}
+      >
+        <MotionFlex width={{ base: '90%', md: '40%' }} direction="column">
           <MotionImage src="/assets/hans-zimmer-award.jpeg" marginBottom="8" />
         </MotionFlex>
-        <MotionFlex width="40%" direction="column">
+        <MotionFlex
+          width={{ base: '60%', md: '40%' }}
+          marginTop={{ base: 12, md: 0 }}
+          alignSelf={{ base: 'flex-end', md: 'unset' }}
+          direction="column"
+        >
           <MotionImage
             src="/assets/hans-zimmer-glasses.jpeg"
             marginBottom={8}
@@ -33,32 +41,70 @@ const FilmsCareer = () => {
         </Heading>
       </Flex>
 
-      <Flex justifyContent="center" position="relative">
+      <Flex
+        justifyContent="center"
+        position="relative"
+        h={{ base: 'xl', md: '4xl' }}
+      >
         <Image
-          w="60%"
-          h="4xl"
+          w={{ base: '80%', md: '60%' }}
+          h="full"
           roundedTopLeft="full"
           roundedTopRight="full"
           objectFit="cover"
           src="/assets/hans-zimmer-piano.jpeg"
         />
-        <Flex position="absolute" top="35%" left="10%" alignItems="center">
-          <Heading marginRight={4}>11&nbsp;/</Heading>
-          <Text fontWeight="normal" fontSize="xl">
+        <Flex
+          position="absolute"
+          top="35%"
+          left={{ base: '0%', md: '10%' }}
+          alignItems="center"
+        >
+          <Heading
+            fontSize={{ base: '4xl', md: '5xl', lg: '8xl' }}
+            marginRight={4}
+          >
+            11&nbsp;/
+          </Heading>
+          <Text
+            fontWeight="normal"
+            fontSize={{ base: 'md', md: 'lg', xl: 'xl' }}
+          >
             OSCAR <br />
             NOMINATIONS
           </Text>
         </Flex>
-        <Flex position="absolute" top="15%" right="10%" alignItems="center">
-          <Heading marginRight={4}>18&nbsp;/</Heading>
-          <Text fontWeight="normal" fontSize="xl">
+        <Flex
+          position="absolute"
+          top="15%"
+          right={{ base: '0%', md: '20%' }}
+          alignItems="center"
+        >
+          <Heading
+            fontSize={{ base: '4xl', md: '5xl', lg: '8xl' }}
+            marginRight={4}
+          >
+            18&nbsp;/
+          </Heading>
+          <Text
+            fontWeight="normal"
+            fontSize={{ base: 'md', md: 'lg', xl: 'xl' }}
+          >
             GRAMMY <br />
             NOMINATIONS
           </Text>
         </Flex>
         <Flex position="absolute" top="75%" left="45%" alignItems="center">
-          <Heading marginRight={4}>14&nbsp;/</Heading>
-          <Text fontWeight="normal" fontSize="xl">
+          <Heading
+            fontSize={{ base: '4xl', md: '5xl', lg: '8xl' }}
+            marginRight={4}
+          >
+            14&nbsp;/
+          </Heading>
+          <Text
+            fontWeight="normal"
+            fontSize={{ base: 'md', md: 'lg', xl: 'xl' }}
+          >
             GOLDEN GLOBES <br />
             NOMINATIONS
           </Text>

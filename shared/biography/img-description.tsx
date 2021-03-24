@@ -3,9 +3,13 @@ import { MotionImage, Description } from '@components';
 
 const ImgDescription = () => {
   return (
-    <Flex direction="column" alignItems="flex-end">
+    <Flex
+      direction="column"
+      alignItems="flex-end"
+      marginBottom={{ base: 48, md: 0 }}
+    >
       <MotionImage
-        h="4xl"
+        h={{ base: 'lg', md: '4xl' }}
         w="full"
         objectFit="cover"
         src="/assets/hans-zimmer-grayscale.jpeg"
@@ -15,7 +19,7 @@ const ImgDescription = () => {
 
       <Description
         subtitle={{ top: 'MINI BIOGRAPHY FROM', bottom: 'IMDB' }}
-        w="40%"
+        w={{ base: '100%', md: '40%' }}
         marginTop="28"
       >
         A turning point in Zimmer&apos;s career in 1998 he was asked to score

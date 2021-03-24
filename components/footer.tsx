@@ -12,7 +12,9 @@ const Footer = () => (
     borderTopWidth="thin"
     width="full"
   >
-    <Heading size="sm">&copy; 1996-2021</Heading>
+    <Heading fontSize={{ base: 'xl', md: 'xl', lg: '2xl', xl: '4xl' }}>
+      &copy; 1996-2021
+    </Heading>
   </Flex>
 );
 

@@ -3,8 +3,13 @@ import { MotionFlex, MotionImage, MotionHeading } from '@components/index';
 
 const Latests = () => {
   return (
-    <Box marginTop={44}>
-      <Flex justifyContent="space-between" w="full" marginBottom={40}>
+    <Box marginTop={44} marginBottom={48}>
+      <Flex
+        direction={{ base: 'column', md: 'row' }}
+        justifyContent="space-between"
+        w="full"
+        marginBottom={40}
+      >
         <MotionHeading fontSize="7xl" marginBottom={16} fontWeight="light">
           LATEST /
         </MotionHeading>
@@ -20,8 +25,11 @@ const Latests = () => {
           beginning in Feburary 2021.
         </Text>
       </Flex>
-      <Flex justifyContent="space-between">
-        <MotionFlex width="30%" direction="column">
+      <Flex
+        justifyContent="space-between"
+        direction={{ base: 'column', md: 'row' }}
+      >
+        <MotionFlex width={{ base: '80%', md: '30%' }} direction="column">
           <MotionImage
             src="/assets/hans-zimmer-live-show.jpeg"
             height="md"
@@ -40,7 +48,11 @@ const Latests = () => {
             2020, Sep 15
           </Text>
         </MotionFlex>
-        <MotionFlex width="40%" direction="column" marginTop="32">
+        <MotionFlex
+          width={{ base: '70%', md: '40%' }}
+          direction="column"
+          marginTop="32"
+        >
           <MotionImage
             src="/assets/hans-zimmer-ron-howard.jpg"
             marginBottom={8}
