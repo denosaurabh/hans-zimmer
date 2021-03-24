@@ -1,15 +1,8 @@
-import { VStack, Box, Link, Text } from '@chakra-ui/react';
+import { VStack, Box, Link, Text, GridItem } from '@chakra-ui/react';
 
-import { Logo, MotionGrid, MotionCircle } from '@components';
+import { Logo, MotionGrid, MotionImage } from '@components';
 
 const Header = () => {
-  // const array = 'Hans Zimmer European Tour 2021'.split('');
-
-  // const deg = 360 / array.length;
-  // const origin = 0;
-
-  // const radius = 50;
-
   return (
     <MotionGrid
       initial={{ opacity: 0 }}
@@ -39,54 +32,19 @@ const Header = () => {
         </VStack>
       </Box>
 
-      <MotionCircle
-        position="relative"
-        width={120}
-        height={120}
-        bg="grey.light"
-        initial={{ rotate: 0 }}
-        animate={{ rotate: 360 }}
-        transition={{ ease: 'linear', duration: 10, repeat: Infinity }}
-      >
-        <svg height="100" width="100">
-          <circle id="circle" cx="50" cy="50" r="40" />
-
-          <text
-            style={{ color: 'white' }}
-            x="25"
-            fontFamily="serif"
-            fontWeight="medium"
-            fontSize="sm"
-            color="grey.dark"
-          >
-            <textPath xlinkHref="#circle">
-              Hans Zimmer European Tour 2021
-            </textPath>
-          </text>
-        </svg>
-        {/* {'Hans Zimmer European Tour 2021'.split('').map((el, i, arr) => {
-          origin += deg;
-
-          return (
-            <Text
-              sx={{
-                height: radius + 'px',
-                position: 'absolute',
-                transform: `rotate(${origin}deg)`,
-                transformOrigin: '0 100%'
-              }}
-              display="inline-block"
-              fontFamily="serif"
-              fontWeight="medium"
-              fontSize="sm"
-              color="grey.dark"
-              key={i}
-            >
-              {el == ' ' ? '\xa0' : el}
-            </Text>
-          );
-        })} */}
-      </MotionCircle>
+      <GridItem colStart={{ base: 3, md: -1 }} marginTop={{ base: 20, md: 0 }}>
+        <MotionImage
+          initial={{ rotate: 0 }}
+          animate={{ rotate: 360 }}
+          transition={{ ease: 'linear', duration: 10, repeat: Infinity }}
+          src="/assets/circle.svg"
+          width={32}
+          height={32}
+          minWidth="80px"
+          minHeight="80px"
+          alt="Hans Zimmer Eauropean Tour"
+        />
+      </GridItem>
     </MotionGrid>
   );
 };

@@ -14,7 +14,6 @@ const ImgDescription = () => {
         objectFit="cover"
         src="/assets/hans-zimmer-grayscale.jpeg"
         transition={{ ease: 'linear', duration: 0.4 }}
-        // style={{ x: imgXY.x, y: imgXY.y }}
       />
 
       <Description

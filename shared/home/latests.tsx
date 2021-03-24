@@ -3,33 +3,10 @@ import { MotionFlex } from '@components/index';
 import { NewsBox } from '@components/index';
 
 const Latests = () => {
-  // --------------- FOR LATER USE ---------------
-  /* 
-
-  const y2 = useSpring(
-    useTransform(scrollY, [elementTop - 200, elementBottom - 200], [0, 150]),
-    {
-      damping: 100,
-      stiffness: 100,
-      mass: 10,
-      duration: 2
-    }
-  );
-
-  const y3 = useSpring(
-    useTransform(scrollY, [elementTop - 200, elementBottom - 200], [0, 50]),
-    {
-      damping: 1,
-      stiffness: 100,
-      mass: 100,
-      duration: 2
-    }
-  );
-
-  */
-
   return (
-    <MotionFlex
+    <MotionFlex        // ref={imageRef}
+        // ref={imageRef}
+
       marginTop={{ base: 40, md: 96 }}
       marginBottom={{ base: 44, md: 80 }}
       flexDirection="column"
