@@ -7,7 +7,12 @@ import { ImgDescription, Releases, Latests } from '@shared/home/index';
 
 const Home = () => {
   return (
-    <Page>
+    <Page
+      seo={{
+        title: 'Home',
+        description: 'Hans Zimmer, Film Score Composer and Record Producer'
+      }}
+    >
       <Heading
         mainTitle={{ text: 'HANS' }}
         subTitle={{ text: 'ZIMMER' }}

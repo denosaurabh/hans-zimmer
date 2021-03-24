@@ -4,12 +4,13 @@ import { MotionHeading } from '@components/index';
 interface MovieBoxProps {
   year: number;
   image: string;
+  label: string;
   title: string;
   job: string;
   index: number;
 }
 
-const MovieBox = ({ year, image, title, job, index }: MovieBoxProps) => {
+const MovieBox = ({ year, image, title, job, label, index }: MovieBoxProps) => {
   return (
     <Flex
       height="auto"
@@ -34,6 +35,7 @@ const MovieBox = ({ year, image, title, job, index }: MovieBoxProps) => {
         objectFit="cover"
         justifySelf="flex-start"
         src={`/assets/${image}`}
+        alt={label}
         marginRight={{ base: '10%', lg: '15%' }}
       />
       <Flex flexDirection="column">

@@ -14,10 +14,12 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en-us">
         <Head>
           <title>Hans Zimmer</title>
           <link rel="icon" href="/favicon.ico" />
+
+          <meta lang="en-us"></meta>
 
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link

@@ -20,18 +20,21 @@ const Releases = () => (
       {[
         {
           image: 'films/lion-king.jfif',
+          label: 'A Big Lion Sitting',
           year: 2020,
           job: 'Composer',
           title: `THE LION KING`
         },
         {
           image: 'films/no-time-to-die.jpg',
+          label: 'A man with grey coat',
           year: 2020,
           job: 'Score Producer / J. Marr',
           title: 'NO TIME TO DIE'
         },
         {
           image: 'films/x-men.jpg',
+          label: 'Two womens holding hands and watching up',
           year: 2020,
           job: 'Composer',
           title: 'X-MEN:DARK PHOENIX'

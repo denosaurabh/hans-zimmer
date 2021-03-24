@@ -6,7 +6,12 @@ import { ImgDescription, FilmsCareer, Latests } from '@shared/biography';
 
 const Home = (): JSX.Element => {
   return (
-    <Page>
+    <Page
+      seo={{
+        title: 'Home',
+        description: 'Hans Zimmer, Films Career and Latest News'
+      }}
+    >
       <Heading
         mainTitle={{
           text: 'BIOGRAPHY',

@@ -6,7 +6,12 @@ import { Films, ImgDescription } from '@shared/nominations';
 
 const Home = (): JSX.Element => {
   return (
-    <Page>
+    <Page
+      seo={{
+        title: 'Nominations',
+        description: 'Hans Zimmer, Awards Nominations & Films'
+      }}
+    >
       <Heading
         mainTitle={{
           text: 'NOMINATION',

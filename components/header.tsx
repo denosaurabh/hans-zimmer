@@ -1,4 +1,4 @@
-import { VStack, Box, Link } from '@chakra-ui/react';
+import { VStack, Box, Link, Text } from '@chakra-ui/react';
 
 import { Logo, MotionGrid, MotionCircle } from '@components';
 
@@ -25,7 +25,7 @@ const Header = () => {
           <Link href="/nominations" fontWeight="" size="sm">
             NOMINATIONS
           </Link>
-          <Link size="sm">AWARDS</Link>
+          <Text size="sm">AWARDS</Text>
         </VStack>
       </Box>
       <Box display={{ base: 'none', md: 'block' }} paddingLeft={8}>
@@ -33,9 +33,9 @@ const Header = () => {
           <Link href="/biography" size="sm">
             BIOGRAPHY
           </Link>
-          <Link size="sm">CAREER</Link>
-          <Link size="sm">ARCHIVES</Link>
-          <Link size="sm">LATESTS</Link>
+          <Text size="sm">CAREER</Text>
+          <Text size="sm">ARCHIVES</Text>
+          <Text size="sm">LATESTS</Text>
         </VStack>
       </Box>
 

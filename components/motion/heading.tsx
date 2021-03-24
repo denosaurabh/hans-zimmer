@@ -36,7 +36,7 @@ const MotionHeading = ({ children, ...rest }: MotionHeadingI) => {
   };
 
   const item = {
-    hidden: { y: 150 },
+    hidden: { y: 200 },
     show: {
       y: 0,
       transition: {
