@@ -22,7 +22,7 @@ const Home = (): JSX.Element => {
           mid: 'HANS ZIMMER',
           bottom: '(SELECTION)',
           paddingTop: 4,
-          fontSize: { base: 'xl', md: 'lg', lg: 'xl' }
+          fontSize: { base: 'xl', md: 'lg', lg: '2xl' }
         }}
       />
       <ImgDescription />

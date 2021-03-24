@@ -31,7 +31,7 @@ const Latests = () => {
       >
         <MotionFlex width={{ base: '80%', md: '30%' }} flexDirection="column">
           <MotionImage
-            src="/assets/hans-zimmer-live-show.jpeg"
+            src="/assets/hans-zimmer-live-show.jpg"
             height="md"
             objectFit="cover"
             marginBottom="8"

@@ -62,7 +62,7 @@ const TopHeading = ({ mainTitle, subTitle, description }: TopHeadingI) => {
         rowStart={{ base: 3, md: 2 }}
         justifySelf="center"
         alignSelf="center"
-        fontSize={{ base: 'md', md: 'lg', lg: 'xl' }}
+        fontSize={{ base: 'md', md: 'lg', lg: '2xl' }}
         fontWeight="light"
         {...restDesProps}
       >

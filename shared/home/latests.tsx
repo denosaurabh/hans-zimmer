@@ -107,7 +107,7 @@ const Latests = () => {
           // style={{ y: y3 }}
           transition={{ duration: 2 }}
         >
-          <MotionImage src="/assets/bond-movie.png" marginBottom={8} />
+          <MotionImage src="/assets/billie-eilish.jpg" marginBottom={8} />
           <Heading
             fontFamily="body"
             fontSize={{ base: 'lg', md: 'xl', lg: '3xl' }}

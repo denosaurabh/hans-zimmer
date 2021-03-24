@@ -2,7 +2,15 @@ import { useState } from 'react';
 import { Flex, GridItem, Heading, Text } from '@chakra-ui/react';
 import { MotionFlex, MotionBox, MotionGrid } from '@components/index';
 
-const FilmBox = () => {
+interface FilmBoxI {
+  title: string;
+  year: number;
+  award: string;
+  nomination: string;
+  image: string;
+}
+
+const FilmBox = ({ title, year, award, nomination, image }: FilmBoxI) => {
   const [isHovered, setHovered] = useState(false);
 
   return (
@@ -22,11 +30,13 @@ const FilmBox = () => {
       >
         <Flex justifyContent="center" alignItems="center" w="100%" h="100%">
           <MotionBox
-            initial={{ width: 'auto', height: '0' }}
+            width="100%"
+            style={{ width: '100%' }}
+            initial={{ height: '0' }}
             animate={isHovered ? { height: '100%' } : {}}
             transition={{ ease: 'linear', duration: 0.4 }}
             sx={{
-              backgroundImage: 'url(/assets/lion-king.jfif)',
+              backgroundImage: `url(${image})`,
               backgroundSize: 'cover',
               objectFit: 'cover',
               backgroundRepeat: 'no-repeat',
@@ -62,20 +72,20 @@ const FilmBox = () => {
               fontSize={{ base: '4xl', lg: '6xl', xl: '8xl' }}
               marginRight="10%"
             >
-              2020&nbsp;/
+              {year}&nbsp;/
             </Heading>
             <Text
               fontSize={{ base: 'md', lg: 'xl', xl: 'x-large' }}
               fontWeight="normal"
             >
-              GRAMMY <br /> AWARDS
+              {award}
             </Text>
           </Flex>
           <Flex flexDirection="column" alignItems="flex-end">
             <Heading fontSize={{ base: '2xl', lg: '4xl', xl: '5xl' }}>
-              THE LION KING
+              {title}
             </Heading>
-            <Text variant="semibold">Nominee</Text>
+            <Text variant="semibold">{nomination}</Text>
           </Flex>
         </MotionFlex>
       </GridItem>

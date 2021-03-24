@@ -19,19 +19,19 @@ const Releases = () => (
     <Flex flexDirection="column" marginTop="24">
       {[
         {
-          image: 'lion-king.jfif',
+          image: 'films/lion-king.jfif',
           year: 2020,
           job: 'Composer',
           title: `THE LION KING`
         },
         {
-          image: 'no-time-to-die.jpg',
+          image: 'films/no-time-to-die.jpg',
           year: 2020,
           job: 'Score Producer / J. Marr',
           title: 'NO TIME TO DIE'
         },
         {
-          image: 'x-men.jpg',
+          image: 'films/x-men.jpg',
           year: 2020,
           job: 'Composer',
           title: 'X-MEN:DARK PHOENIX'

@@ -68,7 +68,7 @@ const ImgDescription = () => {
         h={{ base: 'sm', md: 'lg' }}
         w={{ base: 'sm', md: 'lg' }}
         objectFit="cover"
-        src="/assets/hans-zimmer-blue.jpeg"
+        src="/assets/hans-zimmer-blue.jpg"
         transition={{ ease: 'linear', duration: 0.4 }}
         // style={{ x: imgXY.x, y: imgXY.y }}
       />
