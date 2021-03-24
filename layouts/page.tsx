@@ -1,5 +1,5 @@
 import SmoothScroll from '@layouts/smooth-scroll';
-import { Footer, Header } from '@components/index';
+import { Header, Footer } from '@components/index';
 
 interface PageI {
   children: JSX.Element[];

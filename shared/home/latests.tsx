@@ -103,6 +103,7 @@ const Latests = () => {
         </MotionFlex>
         <MotionFlex
           width={{ base: '80%', md: '60%' }}
+          marginTop={{ base: 12, md: 0 }}
           flexDirection="column"
           // style={{ y: y3 }}
           transition={{ duration: 2 }}

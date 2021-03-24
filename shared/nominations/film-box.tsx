@@ -8,9 +8,17 @@ interface FilmBoxI {
   award: string;
   nomination: string;
   image: string;
+  label: string;
 }
 
-const FilmBox = ({ title, year, award, nomination, image }: FilmBoxI) => {
+const FilmBox = ({
+  title,
+  year,
+  award,
+  nomination,
+  image,
+  label
+}: FilmBoxI) => {
   const [isHovered, setHovered] = useState(false);
 
   return (
@@ -35,6 +43,7 @@ const FilmBox = ({ title, year, award, nomination, image }: FilmBoxI) => {
             initial={{ height: '0' }}
             animate={isHovered ? { height: '100%' } : {}}
             transition={{ ease: 'linear', duration: 0.4 }}
+            id={label}
             sx={{
               backgroundImage: `url(${image})`,
               backgroundSize: 'cover',
@@ -81,7 +90,7 @@ const FilmBox = ({ title, year, award, nomination, image }: FilmBoxI) => {
               {award}
             </Text>
           </Flex>
-          <Flex flexDirection="column" alignItems="flex-end">
+          <Flex flexDirection="column" alignItems="flex-end" textAlign="right">
             <Heading fontSize={{ base: '2xl', lg: '4xl', xl: '5xl' }}>
               {title}
             </Heading>

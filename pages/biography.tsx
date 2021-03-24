@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Page } from '@layouts/index';
-import { Heading } from '@components';
+import { Heading, Information } from '@components';
 import { ImgDescription, FilmsCareer, Latests } from '@shared/biography';
 
 const Home = (): JSX.Element => {
@@ -26,6 +26,7 @@ const Home = (): JSX.Element => {
       <ImgDescription />
       <FilmsCareer />
       <Latests />
+      <Information />
     </Page>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Page } from '@layouts/index';
-import { Heading } from '@components/index';
+import { Heading, Information } from '@components/index';
 
 import { ImgDescription, Releases, Latests } from '@shared/home/index';
 
@@ -21,6 +21,7 @@ const Home = () => {
       <ImgDescription />
       <Releases />
       <Latests />
+      <Information />
     </Page>
   );
 };

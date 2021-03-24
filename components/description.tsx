@@ -1,4 +1,4 @@
-import { VStack, Text } from '@chakra-ui/react';
+import { VStack, Text, Link } from '@chakra-ui/react';
 
 interface DescriptionI {
   children: string;
@@ -23,14 +23,14 @@ const Description = ({ children, subtitle, ...rest }: DescriptionI) => {
         {children}
       </Text>
 
-      <Text
+      <Link
         letterSpacing="wide"
         fontSize={{ base: 'xl', md: 'x' }}
         fontWeight="medium"
         casing="uppercase"
       >
         {top} &#8599; <br /> {bottom}
-      </Text>
+      </Link>
     </VStack>
   );
 };

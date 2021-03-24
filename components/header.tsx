@@ -1,4 +1,4 @@
-import { VStack, Box, Text } from '@chakra-ui/react';
+import { VStack, Box, Link } from '@chakra-ui/react';
 
 import { Logo, MotionGrid, MotionCircle } from '@components';
 
@@ -20,23 +20,22 @@ const Header = () => {
       className="header"
     >
       <Logo />
-      <Box display={{ base: 'hidden', md: 'unset' }}>
+      <Box display={{ base: 'none', md: 'block' }}>
         <VStack alignItems="left" spacing={2}>
-          <Text fontWeight="" size="sm">
-            DISCOGRAPHY
-          </Text>
-          <Text size="sm">TEAM</Text>
-          <Text size="sm"></Text>
-          <Text size="sm"></Text>
-          <Text size="sm"></Text>
+          <Link href="/nominations" fontWeight="" size="sm">
+            NOMINATIONS
+          </Link>
+          <Link size="sm">AWARDS</Link>
         </VStack>
       </Box>
-      <Box display={{ base: 'hidden', md: 'unset' }}>
+      <Box display={{ base: 'none', md: 'block' }} paddingLeft={8}>
         <VStack alignItems="left" spacing={2}>
-          <Text size="sm">BIOGRAPHY</Text>
-          <Text size="sm">MEDIA</Text>
-          <Text size="sm">ARCHIVES</Text>
-          <Text size="sm">NEWS</Text>
+          <Link href="/biography" size="sm">
+            BIOGRAPHY
+          </Link>
+          <Link size="sm">CAREER</Link>
+          <Link size="sm">ARCHIVES</Link>
+          <Link size="sm">LATESTS</Link>
         </VStack>
       </Box>
 

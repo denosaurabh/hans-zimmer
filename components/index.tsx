@@ -3,6 +3,7 @@ import Logo from '@components/logo';
 import MovieBox from '@components/movie-box';
 import Heading from '@components/heading';
 import Description from '@components/description';
+import Information from '@components/information';
 import Footer from '@components/footer';
 
 import {
@@ -21,6 +22,7 @@ export {
   Logo,
   Heading,
   Description,
+  Information,
   Footer,
   // Motion Comps
   MovieBox,
