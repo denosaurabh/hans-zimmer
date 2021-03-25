@@ -27,12 +27,6 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <link
-            href="//db.onlinewebfonts.com/c/39f1392b405636e18b86258bbb58bb45?family=Cosi+Times+Light+Condensed"
-            rel="stylesheet"
-            type="text/css"
-          />
-
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"

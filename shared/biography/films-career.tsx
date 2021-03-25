@@ -1,4 +1,4 @@
-import { Heading, Flex, Image, Text } from '@chakra-ui/react';
+import { Heading, Flex, Image } from '@chakra-ui/react';
 import { MotionFlex, MotionImage } from '@components/index';
 import NominationsNumber from '@shared/biography/nominations-number';
 

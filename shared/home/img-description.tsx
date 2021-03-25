@@ -15,7 +15,7 @@ const ImgHeading = () => {
   return (
     <Flex position="relative">
       <MotionImage
-        src="/assets/hans-zimmer.png"
+        src="/assets/hans-zimmer.jpg"
         bgSize="cover"
         alt="hans zimmer sitting on chair"
         style={{

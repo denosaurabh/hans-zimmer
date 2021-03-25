@@ -35,6 +35,15 @@ const Information = () => {
         &copy; ALL MATERIALS HAVE BEEN USED FOR NON-COMMERCIAL PURPOSES AND
         BELONG TO THEIR OWNERS
       </Text>
+      <Link
+        fontSize="2xl"
+        marginBottom={20}
+        textDecoration="underline"
+        href="http://www.onlinewebfonts.com"
+        textAlign="center"
+      >
+        Online Web Fonts
+      </Link>
       <VStack spacing={8}>
         <Heading fontSize={{ base: '2xl', md: '5xl' }}>
           DESIGNED BY: &nbsp;

@@ -40,6 +40,7 @@ const Header = () => {
           src="/assets/circle.svg"
           width={32}
           height={32}
+          boxSize={32}
           minWidth="80px"
           minHeight="80px"
           alt="Hans Zimmer Eauropean Tour"

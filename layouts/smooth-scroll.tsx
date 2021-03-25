@@ -1,4 +1,4 @@
-import React, { useRef, useState, useCallback, useLayoutEffect } from 'react';
+import React, { useRef, useState, useCallback, useEffect } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 import {
   useViewportScroll,
@@ -26,7 +26,7 @@ const SmoothScroll = ({ children }: SmoothScrollProps) => {
   }, []);
 
   // observe when browser is resizing
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!scrollRef.current) return;
 
     setPageHeight(window.innerHeight);

@@ -4,9 +4,7 @@ import { NewsBox } from '@components/index';
 
 const Latests = () => {
   return (
-    <MotionFlex        // ref={imageRef}
-        // ref={imageRef}
-
+    <MotionFlex
       marginTop={{ base: 40, md: 96 }}
       marginBottom={{ base: 44, md: 80 }}
       flexDirection="column"

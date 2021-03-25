@@ -32,6 +32,9 @@ const MovieBox = ({ year, image, title, job, label, index }: MovieBoxProps) => {
       <Image
         h={{ base: '70px', sm: '100px', md: '140px' }}
         w={{ base: '100px', sm: '140px', md: '190px' }}
+        boxSize="auto"
+        htmlWidth="auto"
+        htmlHeight="auto"
         objectFit="cover"
         justifySelf="flex-start"
         src={`/assets/${image}`}

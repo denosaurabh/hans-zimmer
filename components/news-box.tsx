@@ -1,5 +1,5 @@
-import { Heading, Text } from '@chakra-ui/react';
-import { MotionFlex, MotionImage } from '@components/index';
+import { Heading, Text, Image } from '@chakra-ui/react';
+import { MotionFlex } from '@components/index';
 
 interface NewsBoxI {
   image: string;
@@ -11,7 +11,7 @@ interface NewsBoxI {
 }
 
 const NewsBox = (props: NewsBoxI) => {
-  const { image, heading, label, imageSize = 'unset', date, ...rest } = props;
+  const { image, heading, label, imageSize = 'auto', date, ...rest } = props;
   const { top, mid, bottom } = heading;
 
   return (
@@ -21,10 +21,14 @@ const NewsBox = (props: NewsBoxI) => {
       transition={{ duration: 2 }}
       {...rest}
     >
-      <MotionImage
+      <Image
         src={image}
         alt={label}
         height={imageSize}
+        htmlWidth="auto"
+        htmlHeight="auto"
+        boxSize="auto"
+        width="full"
         objectFit="cover"
         marginBottom="8"
       />
