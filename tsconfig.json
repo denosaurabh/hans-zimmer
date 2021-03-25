@@ -22,6 +22,7 @@
       "@layouts/*": ["layouts/*"],
       "@shared/*": ["shared/*"],
       "@components": ["components"],
+      "@contexts/*": ["contexts/*"],
       "@components/motion": ["components/motion"]
     },
     "forceConsistentCasingInFileNames": true,

@@ -1,5 +1,6 @@
 import { Grid, GridItem } from '@chakra-ui/react';
 import { MotionHeading, MotionText } from '@components/index';
+import { useOnboarding } from '@contexts/onboarding';
 
 interface TopHeadingI {
   mainTitle: { text: string; [key: string]: unknown };
@@ -17,6 +18,8 @@ interface TopHeadingI {
 }
 
 const TopHeading = ({ mainTitle, subTitle, description }: TopHeadingI) => {
+  const { headingDelay, textDelay } = useOnboarding();
+
   const { text: mainTitleText, ...mainTitleProps } = mainTitle;
   const {
     text: subTitleText,
@@ -35,6 +38,7 @@ const TopHeading = ({ mainTitle, subTitle, description }: TopHeadingI) => {
     >
       <GridItem colSpan={{ base: 1, md: 2 }}>
         <MotionHeading
+          delay={headingDelay}
           fontSize={['60px', '90px', '100px', '130px', '168px']}
           {...mainTitleProps}
         >
@@ -52,6 +56,7 @@ const TopHeading = ({ mainTitle, subTitle, description }: TopHeadingI) => {
         rowStart={2}
       >
         <MotionHeading
+          delay={headingDelay}
           fontSize={['60px', '90px', '100px', '130px', '168px']}
           {...subTitleProps}
         >
@@ -67,9 +72,9 @@ const TopHeading = ({ mainTitle, subTitle, description }: TopHeadingI) => {
         fontWeight="light"
         {...restDesProps}
       >
-        <MotionText>{top}</MotionText>
-        <MotionText>{mid}</MotionText>
-        <MotionText>{bottom}</MotionText>
+        <MotionText delay={textDelay}>{top}</MotionText>
+        <MotionText delay={textDelay}>{mid}</MotionText>
+        <MotionText delay={textDelay}>{bottom}</MotionText>
       </GridItem>
     </Grid>
   );

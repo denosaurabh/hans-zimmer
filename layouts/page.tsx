@@ -1,5 +1,6 @@
 import { NextSeo } from 'next-seo';
 
+import PageTransition from '@layouts/page-transition';
 import SmoothScroll from '@layouts/smooth-scroll';
 import { Header, Footer } from '@components/index';
 
@@ -12,9 +13,9 @@ const Page = ({ children, seo }: PageI) => {
   return (
     <>
       <NextSeo {...seo} titleTemplate="%s | Hans Zimmer" />
-
+      <PageTransition />
       <Header />
-      <SmoothScroll key>{children}</SmoothScroll>
+      <SmoothScroll>{children}</SmoothScroll>
       <Footer />
     </>
   );

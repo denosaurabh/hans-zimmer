@@ -10,32 +10,34 @@ const MotionTextJSX: React.FC<TextProps> = motion(Text);
 
 interface MotionTextI {
   children: string;
+  delay: number;
   [key: string]: unknown;
 }
-const textContainer = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.015,
-      delayChildren: 0.5
-    }
-  }
-};
 
-const textItem = {
-  hidden: { opacity: 0, x: 0, y: 30 },
-  show: {
-    opacity: 1,
-    x: 0,
-    y: 0,
-    transition: {
-      type: 'tween',
-      duration: 0.7
+const MotionText = ({ children, delay = 0.6, ...rest }: MotionTextI) => {
+  const textContainer = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.015,
+        delayChildren: delay
+      }
     }
-  }
-};
+  };
 
-const MotionText = ({ children, ...rest }: MotionTextI) => {
+  const textItem = {
+    hidden: { opacity: 0, x: 0, y: 30 },
+    show: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        type: 'tween',
+        duration: 0.7
+      }
+    }
+  };
+
   return (
     <Box overflow="hidden">
       <MotionBox

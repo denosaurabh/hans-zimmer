@@ -16,17 +16,13 @@ const Header = () => {
       <Logo />
       <Box display={{ base: 'none', md: 'block' }}>
         <VStack alignItems="left" spacing={2}>
-          <Link href="/nominations" fontWeight="" size="sm">
-            NOMINATIONS
-          </Link>
+          <Link href="/nominations">NOMINATIONS</Link>
           <Text size="sm">AWARDS</Text>
         </VStack>
       </Box>
       <Box display={{ base: 'none', md: 'block' }} paddingLeft={8}>
         <VStack alignItems="left" spacing={2}>
-          <Link href="/biography" size="sm">
-            BIOGRAPHY
-          </Link>
+          <Link href="/biography">BIOGRAPHY</Link>
           <Text size="sm">CAREER</Text>
           <Text size="sm">ARCHIVES</Text>
           <Text size="sm">LATESTS</Text>

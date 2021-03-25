@@ -1,4 +1,10 @@
-import { Flex, Heading, Text, VStack } from '@chakra-ui/react';
+import {
+  Flex,
+  Heading,
+  Text,
+  VStack,
+  Link as ChakraLink
+} from '@chakra-ui/react';
 import Link from 'next/link';
 
 const Information = () => {
@@ -36,28 +42,23 @@ const Information = () => {
         &copy; ALL MATERIALS HAVE BEEN USED FOR NON-COMMERCIAL PURPOSES AND
         BELONG TO THEIR OWNERS
       </Text>
-      <Link
-        fontSize="2xl"
+      <ChakraLink
         marginBottom={20}
         textDecoration="underline"
         href="http://www.onlinewebfonts.com"
         textAlign="center"
       >
         Online Web Fonts
-      </Link>
+      </ChakraLink>
       <VStack spacing={8}>
         <Heading fontSize={{ base: '2xl', md: '5xl' }}>
           DESIGNED BY: &nbsp;
-          <Link fontWeight="bold" href="https://redesign.am" target="blank">
-            SET REDESIGN &#8599;
-          </Link>
+          <Link href="https://redesign.am">SET REDESIGN &#8599;</Link>
         </Heading>
 
         <Heading fontSize={{ base: '2xl', md: '5xl' }}>
           DEVELOPED BY: &nbsp;
-          <Link fontWeight="bold" href="https://denosaurabh.me" target="blank">
-            DENOSAURABh &#8599;
-          </Link>
+          <Link href="https://denosaurabh.me">DENOSAURABH &#8599;</Link>
         </Heading>
       </VStack>
     </Flex>

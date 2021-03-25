@@ -12,25 +12,17 @@ const MotionHeadingJSX: React.FC<MotionHeadingProps> = motion(Heading);
 
 interface MotionHeadingI {
   children: string;
+  delay?: number;
   [key: string]: unknown;
 }
 
-const MotionHeading = ({ children, ...rest }: MotionHeadingI) => {
-  // const styles = useStyleConfig('Heading', { size });
-
-  // const [, setAlreadyShown] = useState(false);
-  // const { inView, ref }: InViewHookResponse = useInView();
-
-  // useEffect(() => {
-  //   if (inView) setAlreadyShown(true);
-  // }, [inView]);
-
+const MotionHeading = ({ children, delay = 0.5, ...rest }: MotionHeadingI) => {
   const container = {
     hidden: {},
     show: {
       transition: {
         staggerChildren: 0.05,
-        delayChildren: 0.5
+        delayChildren: delay
       }
     }
   };
@@ -52,11 +44,8 @@ const MotionHeading = ({ children, ...rest }: MotionHeadingI) => {
   return (
     <MotionBox height="min-content" overflow="hidden">
       <MotionHeadingJSX
-        // ref={ref}
-        // sx={styles}
         variants={container}
         initial={'hidden'}
-        // animate={inView ? 'show' : ''}
         animate="show"
         {...rest}
       >
