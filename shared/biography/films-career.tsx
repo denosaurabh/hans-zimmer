@@ -1,5 +1,6 @@
 import { Heading, Flex, Image, Text } from '@chakra-ui/react';
 import { MotionFlex, MotionImage } from '@components/index';
+import NominationsNumber from '@shared/biography/nominations-number';
 
 const FilmsCareer = () => {
   return (
@@ -54,61 +55,27 @@ const FilmsCareer = () => {
           objectFit="cover"
           src="/assets/hans-zimmer-piano.jpeg"
         />
-        <Flex
-          position="absolute"
+
+        <NominationsNumber
+          number={11}
+          title={{ top: 'OSCAR', bottom: 'NOMINATIONS' }}
           top="35%"
           left={{ base: '0%', md: '10%' }}
-          alignItems="center"
-        >
-          <Heading
-            fontSize={{ base: '4xl', md: '5xl', lg: '8xl' }}
-            marginRight={4}
-          >
-            11&nbsp;/
-          </Heading>
-          <Text
-            fontWeight="normal"
-            fontSize={{ base: 'md', md: 'lg', xl: 'xl' }}
-          >
-            OSCAR <br />
-            NOMINATIONS
-          </Text>
-        </Flex>
-        <Flex
-          position="absolute"
+        />
+
+        <NominationsNumber
+          number={18}
+          title={{ top: 'GRAMMY', bottom: 'NOMINATIONS' }}
           top="15%"
           right={{ base: '0%', md: '20%' }}
-          alignItems="center"
-        >
-          <Heading
-            fontSize={{ base: '4xl', md: '5xl', lg: '8xl' }}
-            marginRight={4}
-          >
-            18&nbsp;/
-          </Heading>
-          <Text
-            fontWeight="normal"
-            fontSize={{ base: 'md', md: 'lg', xl: 'xl' }}
-          >
-            GRAMMY <br />
-            NOMINATIONS
-          </Text>
-        </Flex>
-        <Flex position="absolute" top="75%" left="45%" alignItems="center">
-          <Heading
-            fontSize={{ base: '4xl', md: '5xl', lg: '8xl' }}
-            marginRight={4}
-          >
-            14&nbsp;/
-          </Heading>
-          <Text
-            fontWeight="normal"
-            fontSize={{ base: 'md', md: 'lg', xl: 'xl' }}
-          >
-            GOLDEN GLOBES <br />
-            NOMINATIONS
-          </Text>
-        </Flex>
+        />
+
+        <NominationsNumber
+          number={14}
+          title={{ top: 'GOLDEN GLOBES', bottom: 'NOMINATIONS' }}
+          top="75%"
+          left="45%"
+        />
       </Flex>
     </MotionFlex>
   );

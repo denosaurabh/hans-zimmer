@@ -15,7 +15,7 @@ const Home = (): JSX.Element => {
       <Heading
         mainTitle={{
           text: 'NOMINATION',
-          fontSize: ['60px', '70px', '90px', '130px', '168px']
+          fontSize: ['55px', '60px', '90px', '130px', '168px']
         }}
         subTitle={{
           text: 'ARCHIVE',

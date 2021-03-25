@@ -37,7 +37,7 @@ const Releases = () => (
           label: 'Two womens holding hands and watching up',
           year: 2020,
           job: 'Composer',
-          title: 'X-MEN:DARK PHOENIX'
+          title: 'X-MEN: DARK PHOENIX'
         }
       ].map((el, i) => (
         <MovieBox {...el} index={i} key={i} />

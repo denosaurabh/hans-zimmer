@@ -9,6 +9,9 @@ interface FilmBoxI {
   nomination: string;
   image: string;
   label: string;
+  onTouchStartHandler: () => void;
+  onTouchEndHandler: () => void;
+  amITouched: boolean;
 }
 
 const FilmBox = ({
@@ -17,14 +20,19 @@ const FilmBox = ({
   award,
   nomination,
   image,
-  label
+  label,
+  onTouchStartHandler,
+  onTouchEndHandler,
+  amITouched
 }: FilmBoxI) => {
-  const [isHovered, setHovered] = useState(false);
+  const [isActive, setActive] = useState(false);
 
   return (
     <MotionGrid
-      onHoverStart={() => setHovered(true)}
-      onHoverEnd={() => setHovered(false)}
+      onHoverStart={() => setActive(true)}
+      onHoverEnd={() => setActive(false)}
+      onTouchStart={onTouchStartHandler}
+      onTouchEndCapture={onTouchEndHandler}
     >
       <GridItem
         rowStart={1}
@@ -41,7 +49,7 @@ const FilmBox = ({
             width="100%"
             style={{ width: '100%' }}
             initial={{ height: '0' }}
-            animate={isHovered ? { height: '100%' } : {}}
+            animate={isActive || amITouched ? { height: '100%' } : {}}
             transition={{ ease: 'linear', duration: 0.4 }}
             id={label}
             sx={{
@@ -67,7 +75,7 @@ const FilmBox = ({
           borderTopColor="grey.light"
           initial={{}}
           animate={
-            isHovered
+            isActive || amITouched
               ? {
                   paddingLeft: '32px',
                   paddingRight: '32px'
@@ -78,23 +86,28 @@ const FilmBox = ({
         >
           <Flex alignItems="center">
             <Heading
-              fontSize={{ base: '4xl', lg: '6xl', xl: '8xl' }}
+              fontSize={{ base: 'xl', sm: '2xl', lg: '6xl', xl: '8xl' }}
               marginRight="10%"
             >
               {year}&nbsp;/
             </Heading>
             <Text
-              fontSize={{ base: 'md', lg: 'xl', xl: 'x-large' }}
+              fontSize={{ base: 'sm', sm: 'md', lg: 'xl', xl: 'x-large' }}
               fontWeight="normal"
             >
               {award}
             </Text>
           </Flex>
           <Flex flexDirection="column" alignItems="flex-end" textAlign="right">
-            <Heading fontSize={{ base: '2xl', lg: '4xl', xl: '5xl' }}>
+            <Heading fontSize={{ base: 'lg', sm: '2xl', lg: '4xl', xl: '5xl' }}>
               {title}
             </Heading>
-            <Text variant="semibold">{nomination}</Text>
+            <Text
+              fontSize={{ base: 'sm', sm: 'md', md: 'lg', lg: '2xl' }}
+              variant="semibold"
+            >
+              {nomination}
+            </Text>
           </Flex>
         </MotionFlex>
       </GridItem>

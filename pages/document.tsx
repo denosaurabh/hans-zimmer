@@ -14,7 +14,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en-us">
+      <Html lang="en">
         <Head>
           <title>Hans Zimmer</title>
           <link rel="icon" href="/favicon.ico" />

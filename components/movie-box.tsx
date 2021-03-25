@@ -25,13 +25,13 @@ const MovieBox = ({ year, image, title, job, label, index }: MovieBoxProps) => {
       <Text
         fontFamily="heading"
         fontSize="2xl"
-        marginRight={{ base: '4%', md: '10%' }}
+        marginRight={{ base: '4%', sm: '5%', md: '10%' }}
       >
         {year}
       </Text>
       <Image
-        h={{ base: '100px', md: '140px' }}
-        w={{ base: '130px', md: '190px' }}
+        h={{ base: '70px', sm: '100px', md: '140px' }}
+        w={{ base: '100px', sm: '140px', md: '190px' }}
         objectFit="cover"
         justifySelf="flex-start"
         src={`/assets/${image}`}
@@ -41,11 +41,11 @@ const MovieBox = ({ year, image, title, job, label, index }: MovieBoxProps) => {
       <Flex flexDirection="column">
         <MotionHeading
           wordBreak="break-all"
-          fontSize={{ base: 'xl', sm: '2xl', lg: '4xl' }}
+          fontSize={{ base: 'lg', sm: 'xl', lg: '4xl' }}
         >
           {title}
         </MotionHeading>
-        <Text size="sm" variant="semibold">
+        <Text fontSize={{ base: 'xs', md: 'sm' }} variant="semibold">
           {job}
         </Text>
       </Flex>
