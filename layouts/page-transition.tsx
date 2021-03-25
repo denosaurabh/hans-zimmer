@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useOnboarding } from '@contexts/onboarding';
 import { MotionFlex, MotionHeading } from '@components';
 
