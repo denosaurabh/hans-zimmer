@@ -1,6 +1,7 @@
-import { VStack, Box, Link, Text, GridItem } from '@chakra-ui/react';
+import { VStack, Box, Text, GridItem, Image } from '@chakra-ui/react';
+import Link from 'next/link';
 
-import { Logo, MotionGrid, MotionImage } from '@components';
+import { Logo, MotionGrid, MotionFlex } from '@components';
 
 const Header = () => {
   return (
@@ -33,18 +34,26 @@ const Header = () => {
       </Box>
 
       <GridItem colStart={{ base: 3, md: -1 }} marginTop={{ base: 20, md: 0 }}>
-        <MotionImage
+        <MotionFlex
+          justifyContent="center"
+          alignItems="center"
+          width={{ base: 20, mid: 32 }}
+          height={{ base: 20, mid: 32 }}
+          maxWidth={32}
+          maxHeight={32}
+          minWidth={20}
+          minHeight={20}
           initial={{ rotate: 0 }}
           animate={{ rotate: 360 }}
           transition={{ ease: 'linear', duration: 10, repeat: Infinity }}
-          src="/assets/circle.svg"
-          width={32}
-          height={32}
-          boxSize={32}
-          minWidth="80px"
-          minHeight="80px"
-          alt="Hans Zimmer Eauropean Tour"
-        />
+        >
+          <Image
+            src="/assets/circle.svg"
+            htmlWidth="100%"
+            htmlHeight="100%"
+            alt="Hans Zimmer Eauropean Tour"
+          />
+        </MotionFlex>
       </GridItem>
     </MotionGrid>
   );

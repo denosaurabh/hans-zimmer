@@ -25,9 +25,8 @@ const NewsBox = (props: NewsBoxI) => {
         src={image}
         alt={label}
         height={imageSize}
-        htmlWidth="auto"
-        htmlHeight="auto"
-        boxSize="auto"
+        htmlWidth="100%"
+        htmlHeight="100%"
         width="full"
         objectFit="cover"
         marginBottom="8"

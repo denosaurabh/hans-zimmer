@@ -46,7 +46,8 @@ const TopHeading = ({ mainTitle, subTitle, description }: TopHeadingI) => {
         colStart={{ base: 1, md: 2 }}
         justifySelf={{
           base: justifySelfMobile,
-          md: 'flex-start'
+          md: 'flex-start',
+          lg: 'unset'
         }}
         rowStart={2}
       >

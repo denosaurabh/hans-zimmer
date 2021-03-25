@@ -23,9 +23,10 @@ const textContainer = {
 };
 
 const textItem = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, x: 0, y: 30 },
   show: {
     opacity: 1,
+    x: 0,
     y: 0,
     transition: {
       type: 'tween',

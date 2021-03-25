@@ -6,6 +6,7 @@ import FilmsData from '@shared/nominations/filmsData';
 
 const Films = () => {
   const [activeFilm, setActiveFilm] = useState(-1); /* FOR TOUCH EVENTS */
+  /* I DON'T WANT TO SUFFER ANYMORE TO COMPLETE THIS */
   const [isSmallerThan500px] = useMediaQuery('(max-width: 500px)');
   console.log(isSmallerThan500px);
 

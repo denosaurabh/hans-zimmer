@@ -1,6 +1,7 @@
+import { NextSeo } from 'next-seo';
+
 import SmoothScroll from '@layouts/smooth-scroll';
 import { Header, Footer } from '@components/index';
-import { NextSeo } from 'next-seo';
 
 interface PageI {
   children: JSX.Element[];
@@ -13,7 +14,7 @@ const Page = ({ children, seo }: PageI) => {
       <NextSeo {...seo} titleTemplate="%s | Hans Zimmer" />
 
       <Header />
-      <SmoothScroll>{children}</SmoothScroll>
+      <SmoothScroll key>{children}</SmoothScroll>
       <Footer />
     </>
   );

@@ -36,8 +36,9 @@ const MotionHeading = ({ children, ...rest }: MotionHeadingI) => {
   };
 
   const item = {
-    hidden: { y: 200 },
+    hidden: { x: 0, y: 200 },
     show: {
+      x: 0,
       y: 0,
       transition: {
         type: 'spring',

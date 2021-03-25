@@ -1,4 +1,5 @@
-import { Flex, Heading, Text, VStack, Link } from '@chakra-ui/react';
+import { Flex, Heading, Text, VStack } from '@chakra-ui/react';
+import Link from 'next/link';
 
 const Information = () => {
   return (
