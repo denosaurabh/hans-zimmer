@@ -1,8 +1,10 @@
 import { Flex } from '@chakra-ui/react';
 import { useViewportScroll, useTransform, useSpring } from 'framer-motion';
 import { MotionImage, Description } from '@components';
+import { useOnboarding } from '@contexts/onboarding';
 
 const ImgHeading = () => {
+  const { pageTransitionDuration } = useOnboarding();
   const { scrollY } = useViewportScroll();
 
   const y = useSpring(useTransform(scrollY, [400, 1200], [0, 250]), {
@@ -35,7 +37,11 @@ const ImgHeading = () => {
           height: '600px',
           width: '50%'
         }}
-        transition={{ ease: 'easeOut', duration: 0.9, delay: 0.4 }}
+        transition={{
+          ease: 'easeOut',
+          duration: 0.9,
+          delay: pageTransitionDuration + 0.4
+        }}
         whileHover={{ scale: 0.96 }}
       />
 

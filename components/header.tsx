@@ -2,13 +2,16 @@ import { VStack, Box, Text, GridItem, Image } from '@chakra-ui/react';
 import Link from 'next/link';
 
 import { Logo, MotionGrid, MotionFlex } from '@components';
+import { useOnboarding } from '@contexts/onboarding';
 
 const Header = () => {
+  const { pageTransitionDuration } = useOnboarding();
+
   return (
     <MotionGrid
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.7, delay: 2 }}
+      transition={{ duration: 0.7, delay: pageTransitionDuration + 2 }}
       gridTemplateColumns="50% 1fr 1fr 1fr"
       alignItems="start"
       className="header"
