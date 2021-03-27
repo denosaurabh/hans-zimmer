@@ -4,7 +4,7 @@ const FilmsData = [
     year: 2020,
     award: 'GRAMMY \xa0 AWARDS',
     nomination: 'Nominee',
-    image: '/assets/films/lion-king.jfif',
+    image: '/assets/films/lion-king.webp',
     label: 'lion watching'
   },
   {
@@ -12,7 +12,7 @@ const FilmsData = [
     year: 2015,
     award: 'ACADEMY AWARDS \xa0 OSCAR',
     nomination: 'Nomiee',
-    image: '/assets/films/interstellar.jpeg',
+    image: '/assets/films/interstellar.jpg',
     label: 'Astronaut in Space'
   },
   {
@@ -20,7 +20,7 @@ const FilmsData = [
     year: 2014,
     award: 'GOLDEN GLOBE \xa0 AWARDS',
     nomination: 'Nominee',
-    image: '/assets/films/12-years-a-slave.jpeg',
+    image: '/assets/films/12-years-a-slave.jpg',
     label: 'Slaves near farms'
   },
   {
@@ -28,7 +28,7 @@ const FilmsData = [
     year: 2011,
     award: 'ACADEMY AWARDS \xa0 OSCAR',
     nomination: 'Nominee',
-    image: '/assets/films/inception.jpeg',
+    image: '/assets/films/inception.jpg',
     label: 'People with guns'
   },
   {
@@ -36,7 +36,7 @@ const FilmsData = [
     year: 2010,
     award: 'ACADEMY AWARDS \xa0 OSCAR',
     nomination: 'Nominee',
-    image: '/assets/films/sherlock-holmes.jpeg',
+    image: '/assets/films/sherlock-holmes.jpg',
     label: 'People in crowd'
   },
   {
@@ -44,7 +44,7 @@ const FilmsData = [
     year: 2009,
     award: 'GRAMMY \xa0 AWARDS',
     nomination: 'Winner',
-    image: '/assets/films/the-dark-knight-rises.jpeg',
+    image: '/assets/films/the-dark-knight-rises.jpg',
     label: 'Three Human Bats'
   },
   {
@@ -52,7 +52,7 @@ const FilmsData = [
     year: 2007,
     award: 'GRAMMY \xa0 AWARDS',
     nomination: 'Nominee',
-    image: '/assets/films/the-da-vinci-code.jpeg',
+    image: '/assets/films/the-da-vinci-code.jpg',
     label: 'A man and women watching right'
   },
   {
@@ -60,7 +60,7 @@ const FilmsData = [
     year: 2007,
     award: 'GRAMMY \xa0 AWARDS',
     nomination: 'Nominee',
-    image: '/assets/films/pirates-of-the-caribbean.jpeg',
+    image: '/assets/films/pirates-of-the-caribbean.jpg',
     label: 'Six pirates standing'
   },
   {
@@ -68,7 +68,7 @@ const FilmsData = [
     year: 2001,
     award: 'ACADEMY AWARDS \xa0 OSCAR',
     nomination: 'Winner',
-    image: '/assets/films/gladiator.jpeg',
+    image: '/assets/films/gladiator.jpg',
     label: 'Angry man with Sword and Shield'
   }
 ];

@@ -103,7 +103,7 @@ const FilmBox = ({
               {title}
             </Heading>
             <Text
-              fontSize={{ base: 'sm', sm: 'md', md: 'lg', lg: '2xl' }}
+              fontSize={{ base: 'sm', sm: 'md', md: 'lg', lg: 'xl' }}
               variant="semibold"
             >
               {nomination}
