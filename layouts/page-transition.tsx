@@ -30,7 +30,7 @@ const PageTransition = () => {
 
   return (
     <MotionFlex
-      position="absolute"
+      position="fixed"
       zIndex={100}
       bgColor="grey.light"
       style={{

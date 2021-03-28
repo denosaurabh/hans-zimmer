@@ -19,7 +19,7 @@ const Releases = () => (
     <Flex flexDirection="column" marginTop="24">
       {[
         {
-          image: 'films/lion-king.jfif',
+          image: 'films/lion-king.webp',
           label: 'A Big Lion Sitting',
           year: 2020,
           job: 'Composer',
