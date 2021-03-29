@@ -1,10 +1,22 @@
-import React from 'react';
+import { LegacyRef, useEffect, useRef } from 'react';
+import { useRouter } from 'next/router';
 
 import { Page } from '@layouts/index';
 import { Heading, Information } from '@components/index';
 import { Films, ImgDescription } from '@shared/nominations';
 
 const Home = (): JSX.Element => {
+  const filmsRef: LegacyRef<HTMLDivElement> | undefined = useRef(null);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!filmsRef.current) return;
+    if (router.query.to !== filmsRef.current.id) return;
+
+    window.scrollTo(0, filmsRef.current.offsetTop);
+  }, [filmsRef, router]);
+
   return (
     <Page
       seo={{
@@ -31,7 +43,7 @@ const Home = (): JSX.Element => {
         }}
       />
       <ImgDescription />
-      <Films />
+      <Films ref={filmsRef} />
       <Information />
     </Page>
   );

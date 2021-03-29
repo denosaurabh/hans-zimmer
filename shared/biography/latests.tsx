@@ -1,9 +1,11 @@
+import React, { forwardRef, LegacyRef } from 'react';
+
 import { Text, Box, Flex } from '@chakra-ui/react';
 import { MotionHeading, NewsBox } from '@components/index';
 
-const Latests = () => {
+const Latests = forwardRef((_, ref: LegacyRef<HTMLDivElement> | undefined) => {
   return (
-    <Box marginTop={44} marginBottom={48}>
+    <Box marginTop={44} marginBottom={48} ref={ref} id="latests">
       <Flex
         flexDirection={{ base: 'column', md: 'row' }}
         justifyContent="space-between"
@@ -56,6 +58,8 @@ const Latests = () => {
       </Flex>
     </Box>
   );
-};
+});
+
+Latests.displayName = 'Latests';
 
 export default Latests;

@@ -1,5 +1,5 @@
-import { Heading, Text, Image } from '@chakra-ui/react';
-import { MotionFlex } from '@components/index';
+import { Heading, Text } from '@chakra-ui/react';
+import { MotionFlex, MotionImage } from '@components/index';
 
 interface NewsBoxI {
   image: string;
@@ -21,15 +21,16 @@ const NewsBox = (props: NewsBoxI) => {
       transition={{ duration: 2 }}
       {...rest}
     >
-      <Image
+      <MotionImage
         src={image}
         alt={label}
         height={imageSize}
-        htmlWidth="100%"
-        htmlHeight="100%"
         width="full"
-        objectFit="cover"
         marginBottom="8"
+        // initial={{ backgroundSize: 'auto' }}
+        // animate={{ backgroundSize: '130%' }}
+        // transition={{ delay: 7 }}
+        objectFit="cover"
       />
       <Heading
         fontFamily="body"
@@ -49,3 +50,32 @@ const NewsBox = (props: NewsBoxI) => {
 };
 
 export default NewsBox;
+
+/* 
+
+      <Flex flexDirection="column" marginBottom={6}>
+        <MotionHeading
+          fontFamily="body"
+          fontSize={{ base: 'lg', md: 'xl', lg: '3xl' }}
+          fontWeight="normal"
+        >
+          {top + '\u2197'}
+        </MotionHeading>
+        <MotionHeading
+          fontFamily="body"
+          fontSize={{ base: 'lg', md: 'xl', lg: '3xl' }}
+          fontWeight="normal"
+        >
+          {mid}
+        </MotionHeading>
+        <MotionHeading
+          fontFamily="body"
+          fontSize={{ base: 'lg', md: 'xl', lg: '3xl' }}
+          fontWeight="normal"
+        >
+          {bottom ?? ''}
+        </MotionHeading>
+      </Flex>
+
+
+*/

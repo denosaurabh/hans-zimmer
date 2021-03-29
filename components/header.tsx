@@ -1,4 +1,4 @@
-import { VStack, Box, Text, GridItem, Image } from '@chakra-ui/react';
+import { VStack, Box, GridItem, Image } from '@chakra-ui/react';
 import Link from 'next/link';
 
 import { Logo, MotionGrid, MotionFlex } from '@components';
@@ -20,15 +20,15 @@ const Header = () => {
       <Box display={{ base: 'none', md: 'block' }}>
         <VStack alignItems="left" spacing={2}>
           <Link href="/nominations">NOMINATIONS</Link>
-          <Text size="sm">AWARDS</Text>
+          <Link href="/nominations?to=awards">AWARDS</Link>
         </VStack>
       </Box>
-      <Box display={{ base: 'none', md: 'block' }} paddingLeft={8}>
+      <Box display={{ base: 'none', md: 'block' }} paddingLeft={8} zIndex={100}>
         <VStack alignItems="left" spacing={2}>
           <Link href="/biography">BIOGRAPHY</Link>
-          <Text size="sm">CAREER</Text>
-          <Text size="sm">ARCHIVES</Text>
-          <Text size="sm">LATESTS</Text>
+          <Link href="/biography?to=career">CAREER</Link>
+          <Link href="/biography?to=archives">ARCHIVES</Link>
+          <Link href="/biography?to=latests">LATESTS</Link>
         </VStack>
       </Box>
 

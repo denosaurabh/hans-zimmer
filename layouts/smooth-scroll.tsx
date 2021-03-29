@@ -1,4 +1,5 @@
 import React, { useRef, useState, useCallback, useEffect } from 'react';
+
 import ResizeObserver from 'resize-observer-polyfill';
 import {
   useViewportScroll,
