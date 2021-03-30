@@ -34,6 +34,10 @@ const theme = extendTheme({
         overscrollBehaviorY: 'none',
         textRendering: 'optimizeLegibility',
         WebkitFontSmoothing: 'antialiased'
+      },
+      '::selection': {
+        color: 'grey.light',
+        background: 'grey.dark'
       }
     }
   }
