@@ -5,7 +5,7 @@ import { Page } from '@layouts/index';
 import { Heading, Information } from '@components/index';
 import { Films, ImgDescription } from '@shared/nominations';
 
-const Home = (): JSX.Element => {
+const Nominations = () => {
   const filmsRef: LegacyRef<HTMLDivElement> | undefined = useRef(null);
 
   const router = useRouter();
@@ -49,4 +49,10 @@ const Home = (): JSX.Element => {
   );
 };
 
-export default Home;
+export async function getStaticProps() {
+  return {
+    props: { page: 'nominations' } // Page prop for no much reason
+  };
+}
+
+export default Nominations;

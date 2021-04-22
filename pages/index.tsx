@@ -31,4 +31,10 @@ const Home = () => {
   );
 };
 
+export async function getStaticProps() {
+  return {
+    props: { page: 'home' } // Page prop for no much reason
+  };
+}
+
 export default Home;

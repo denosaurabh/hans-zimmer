@@ -10,7 +10,7 @@ import {
   Latests
 } from '@shared/biography';
 
-const Home = (): JSX.Element => {
+const Biography = () => {
   const careerRef: LegacyRef<HTMLHeadingElement> | undefined = useRef(null);
   const archivesRef: LegacyRef<HTMLHeadingElement> | undefined = useRef(null);
   const latestsRef: LegacyRef<HTMLHeadingElement> | undefined = useRef(null);
@@ -70,4 +70,10 @@ const Home = (): JSX.Element => {
   );
 };
 
-export default Home;
+export async function getStaticProps() {
+  return {
+    props: { page: 'biography' } // Page prop for no much reason
+  };
+}
+
+export default Biography;
